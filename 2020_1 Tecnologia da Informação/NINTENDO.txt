@@ -1,0 +1,96 @@
+(Senior) Especialista em Sistemas de TI
+O que era fazer:
+•	Responsável pela implantação, automação (por meio de script), operação e administração do Linux
+•	Trabalhando e melhorando a segurança de TI na área de responsabilidade
+•	•	Conduzindo o design, desenvolvimento, implantação, implementação, operação e administração da infraestrutura de TI local da Nintendo da Europa, focada em virtualização (VMWare), armazenamento (SAN, vSAN, NetApp), backup (vRanger, VEEAM e NetVault) e hardware HPE (armazenamento, computador e rede)
+´Perfil da vaga:
+•	Boas habilidades de comunicação e apresentação
+•	Holística, mente aberta e fora da caixa pensando
+•	Experiência comprovada no design, administração e operação de infraestrutura VMWare, armazenamento e Linux
+•	Experiência profunda e comprovada no design, administração e operação de infraestrutura local (VMWare e armazenamento) e Linux (CentOS, SUSE), idealmente em ambiente heterogêneo e internacional
+
+
+
+
+Desenvolvedor de Web
+O que era fazer:
+•	Manutenção e desenvolvimento de aplicativos baseados na Web para uso interno
+•	Administração e desenvolvimento de bancos de dados
+•	Suporte às partes interessadas internas na otimização de processos e manipulação de dados
+Perfil da vaga:
+•	Altamente motivado, organizado e interessado em trabalhar em ambientes ágeis
+•	Muito boas habilidades de comunicação e apresentação
+•	Profundo conhecimento em desenvolvimento web (PHP, HTML, Javascript, CSS)
+•	Conhecimento avançado em design de banco de dados e SQL (Microsoft SQL Server, MariaDB)
+
+
+
+Arquiteto de informações
+O que era fazer:
+•	Conhecer e usar dados qualitativos e quantitativos, incluindo análises de sites, pesquisas, pesquisas com usuários e entrevistas com partes interessadas
+•	Manter-se atualizado sobre a experiência do usuário, processos da Web e ferramentas e tecnologias digitais
+•	Definindo conceitos e criando wireframes para suportar mudanças estruturais no site
+Perfil da vaga:
+•	Graduação em marketing digital, arquitetura da informação, ciência econômica da computação ou educação similar
+•	Conhecimento em TI e tópicos de design
+•	Experiência anterior com um CMS
+•	Muito boas habilidades de gerenciamento de projetos e auto-organização
+•	Capacidade de comunicação clara e precisa
+
+
+Especialista em Compras Técnicas
+O que era fazer:
+•	Trabalhando em controles de estoque, prazos, cálculo de riscos, previsão e controle de estoque
+•	Analisando processos e implementando fluxos de trabalho ideais para o planejamento 
+•	Planejando e projetando uma nova arquitetura para gerenciamento de peças de serviço na equipe de serviço técnico
+Perfil profissional:
+•	Muito boas habilidades no MS Office e SAP
+•	Fortes habilidades interpessoais e analíticas
+•	Habilidades de gerenciamento de projetos estabelecidas
+•	Capacidade de interagir efetivamente com todos os níveis de gerenciamento
+
+
+Associate Artwork & Design Coordinator
+O que era fazer:
+•	Verificar a qualidade do produto licenciado e a conformidade com as diretrizes ou padrões da Nintendo
+•	Auxiliar no cronograma da visão geral dos produtos e lidar com a conclusão do projeto de design
+•	Apoiar o departamento e o superior nas tarefas administrativas
+Perfil profissional:
+•	Forte interesse em Design Gráfico
+•	Mentalidade muito favorável e orientada para o trabalho em equipe
+•	Excelente em multitarefa, com capacidade de trabalhar de forma independente e bem organizada
+•	Excelente competência intercultural
+
+Coordenador de Planejamento de Vendas
+O que era fazer:
+•	Acompanhar o fluxo de informações de diferentes fontes para manter um banco de dados atualizado
+•	Planejamento e Estratégia de Vendas
+•	Forneça suporte administrativo abrangente
+Perfil profissional:
+•	Estilo de trabalho preciso, com alta atenção aos detalhes
+•	Capacidade de trabalhar de forma estruturada, responsável e independente, bem como vontade de trabalhar em equipe
+•	Trabalho confortável em um ambiente internacional
+
+
+Assistente de equipe:
+O que era fazer:
+•	Manutenção de tarefas administrativas de back-office no departamento de desenvolvimento 
+•	Previsão de apoio de despesas administrativas
+•		Manuseio de aprovações de custos internos e compras de equipamentos de escritório
+Perfil profissional:
+•	Excelentes habilidades de inglês escrito e falado
+•	Muito bom jogador de equipe, com excelentes habilidades interpessoais e de comunicação, além de uma forte atitude de atendimento ao cliente
+•	O conhecimento básico do SAP CATS e / ou Portal HCM seria uma vantagem
+•	Bem organizado, com muita atenção aos detalhes
+
+
+Testador de jogo em lote:
+O que era fazer:
+•	Execução de casos de teste atribuídos com base nas diretrizes e requisitos da Nintendo, visando aplicativos de software a serem lançados 
+•	Colaborar com membros diretos da equipe e colegas em todo o departamento
+•	Sugerir proativamente novos procedimentos de teste ou melhorias nas rotinas existentes
+Perfil profissional:
+•	Alto nível de orientação ao cliente
+•	Excelentes habilidades de comunicação, atenção aos detalhes e capacidade de trabalhar com foco também em prazos rigorosos
+•	O conhecimento de ferramentas de software como JIRA e Confluence e a experiência com recursos / infraestrutura relacionados à rede seriam uma vantagem
+•	Experiência em garantia de qualidade de software / ambiente de desenvolvimento ou área de Teste de Conformidade
