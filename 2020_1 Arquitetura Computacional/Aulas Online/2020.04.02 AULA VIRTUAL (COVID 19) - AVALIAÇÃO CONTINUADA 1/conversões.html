@@ -1,0 +1,34 @@
+<html >
+<body id="bg" style="color: #000000">
+    <h1> Aluno Machine </h1>
+    <input id="valor" placeholder="Insira o valor decimal" autofocus>
+    <button onclick="conversão()">Conversão</button>
+    <b><p id="demo1"></p></b>
+    <b><p id="demo2"></p></b>
+    <b><p id="demo3"></p></b>
+    <b><p id="demo4"></p></b>
+
+</body>
+</html>
+<script>
+    function conversão() {
+    var decimal = Number(valor.value);
+    //let decimal = 1062001;
+    //Base 8:
+    let octal = decimal.toString(8);
+    //Base 16:
+    let hexadecimal = decimal.toString(16);
+    //Base 2:
+    let binaria = decimal.toString(2);
+    console.log (decimal);
+    console.log (octal);
+    console.log (hexadecimal);
+    console.log (binaria);
+    document.getElementById("demo1").innerHTML = `O valor Decimal é: <i>${decimal}</i>`;
+    document.getElementById("demo2").innerHTML = `O valor Octal é: <i>${octal}</i>`;
+    document.getElementById("demo3").innerHTML = `O valor Hexadecimal é: <i>${hexadecimal}</i>`;
+    document.getElementById("demo4").innerHTML = `O valor binário é: <i>${binaria}</i>`;
+    bg.style.backgroundColor = hexadecimal;
+    }
+    document.bgColor = "#3CB371";
+</script>
