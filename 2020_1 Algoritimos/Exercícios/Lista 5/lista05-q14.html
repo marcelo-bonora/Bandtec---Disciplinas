@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q14</title>
+</head>
+<body>
+    <h1>Pizzaria Râti</h1>
+
+    <input id="distancia" placeholder="Insira quantos Km de distancia" autofocus>
+    
+    <button onclick="disponiblidade()">Verificar Disponibilidasde</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function disponiblidade() {
+        var km = Number(distancia.value);
+
+        if (km >= 250) {
+            div_mensagem.innerHTML = `A Pizza Rãti não entrega neste endereço!` ;
+        }
+        if (km < 250)
+            if (km > 50) {
+                div_mensagem.innerHTML = `A sua pizza será entregue, porém o valor de entrega é de R$ 25,00`;
+            }
+        if (km <= 50) {
+            div_mensagem.innerHTML = `A sua pizza será entregue e não custará nada para você :)`;
+        }
+    }
+</script>

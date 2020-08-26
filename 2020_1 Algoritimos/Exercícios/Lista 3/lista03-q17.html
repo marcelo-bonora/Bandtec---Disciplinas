@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista03-q17</title>
+</head>
+<body>
+    
+    <h3> Oração pela fé</h3>
+
+    <select id="oração">
+        <option value="Escolhe um trecho">- escolha um trecho -</option>
+        <option value="Que eu leve o Amor"> Onde houver Ódio</option>
+        <option value=" Que eu leve o Perdão">Onde houver Ofensa</option>
+        <option value="Que eu leve a União">Onde houver Discórdia</option>
+        <option value="Que eu leve a Fé">Onde houver Dúvida</option>
+    </select>
+<br>
+    <button onclick="revelar()">
+        Revelar boa obra
+    </button>
+    <div style="color: green;" id="trecho"></div>
+</body>
+</html>
+<script>
+function revelar() {
+    trecho.innerHTML = oração.value
+}
+</script>

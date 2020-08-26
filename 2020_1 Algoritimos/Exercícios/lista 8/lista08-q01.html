@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista08-q01</title>
+</head>
+<body>
+    <h1>Auxilio do Governo </h1>
+    <input id="renda" placeholder="Insira o valor de sua renda" autofocus>
+    <input id="total_renda" placeholder="Insira o valor da renda total de sua familia">
+
+    <button onclick="verificar()">Verificar ajuda</button>
+
+</body>
+</html>
+<script>
+    function verificar() {
+        var valor_renda = Number(renda.value);
+        var valor_total_renda = Number(total_renda.value);
+
+        if (valor_renda <= 1050 && valor_total_renda <= 2100){
+        alert("Você terá direito!");
+        } else {
+            alert("Você NÃO tem direito!");
+        }
+    }
+</script>

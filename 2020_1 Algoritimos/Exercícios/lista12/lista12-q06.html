@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista12-q06</title>
+</head>
+<body>
+    <h1>Apenas Pares</h1>
+    <button onclick="clicar()">Eu S2 pares</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    var contador = 0;
+    
+    function clicar(){
+        while (contador < 100 ){
+            contador++;
+        if (contador % 2 == 0){
+            div_msg.innerHTML += `<b>${contador}</b><br>`;
+        }
+        }
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista09-q02</title>
+</head>
+<body>
+    <h1>Possibilidade de Parcelar Compra</h1>
+    <select id="forma">
+        <option value="din">Dinheiro</option>
+        <option value="deb">Cartão de Débito</option>
+        <option value="cre">Cartão de Crédito</option>
+        <option value="bol">Boleto</option>
+    </select>
+    <button onclick="analisar()">Analisar compra</button>
+</body>
+</html>
+<script>
+    function analisar(){
+        if (forma.value == `din` || forma.value == 'deb'){
+            alert("Você terá que pagar a vista");
+        }else {
+            alert("Pagamento poderá ser parcelado");
+        }
+    }
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista14-q15</title>
+</head>
+<body>
+    
+    <h1>Curto 3 ou 5</h1>
+
+    <button onclick="ver()">Curto 3 e 5!</button>
+
+    <div id="div_msg"></div>
+    
+</body>
+</html>
+<script>
+
+    function ver(){
+
+        var frase = ``;
+
+        for(c = 0; c <= 100; c++){
+
+            var tri = c%3 == 0;
+            var penta = c%5 == 0;
+            var tri_penta = c%5 == 0 && c%3 == 0;
+            
+            // O NUMERO 0 É UM MISTERIO, ELE É ONIPRESENTE
+            if(c == 0){
+                frase += `${c}<br>`;
+            }
+
+            if(!tri && !penta && !tri_penta){
+                frase += `${c}<br>`;
+
+            }if(tri){
+                frase += `<b>É TRI</b><br>`;
+
+            } if(penta){
+                frase += `<b>É PENTA</b><br>`;
+
+            } if(tri_penta){
+                frase += `<b>É TRI!É PENTA!</b><br>`;
+            }
+        }
+        div_msg.innerHTML = frase;
+    }
+
+</script>

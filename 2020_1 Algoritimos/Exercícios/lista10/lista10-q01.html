@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista10-q01</title>
+</head>
+<body>
+    <h1>Nota e a Frequencia do Aluno</h1>
+    <button onclick="valor_nota()">   Gerar uma nota de aluno entre 0 e 10   </button>
+    <div id="div_mensagem"></div>
+    <button onclick="freq()">   Gerar uma frequência de aluno entre 0 e 100 </button>
+    <div id="div_mensagem2"></div>
+</body>
+</html>
+<script>
+    function valor_nota(){
+        var nota = Math. random() * 12 -1;
+        if (nota < 0){
+            nota = 0;
+        }else if (nota > 10){
+            nota = 10;
+        }
+        div_mensagem.innerHTML = nota.toFixed(2);
+
+    }
+    function freq(){
+        var valor_freq = Math. random() * 103 -2;
+        if (valor_freq < 0){
+            valor_freq = 0;
+        }else if (valor_freq > 100){
+            valor_freq = 100;
+        }
+        div_mensagem2.innerHTML = valor_freq.toFixed(2);
+    }
+</script>

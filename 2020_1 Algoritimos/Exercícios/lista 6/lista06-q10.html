@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista06-q10</title>
+</head>
+<body>
+    <h1>Desempenho de um Atacante de Futebol</h1>
+    <input id="partidas" placeholder="Quantas partidas jogou?" autofocus>
+    <input id="gols" placeholder="Quantos gols marcados?">
+
+    <button onclick="estudar()">Estudar atacante</button>
+
+    <div id="div_mensagem"></div>
+    <div>
+        <img id="div_img" style="height: 200px">
+    </div>
+    <div id="div_mensagem2"></div>
+
+</body>
+</html>
+<script>
+    function estudar() {
+        var média = Number(gols.value) / Number(partidas.value);
+        div_mensagem.innerHTML = ``;
+        div_mensagem2.innerHTML = ``;
+        div_img.src = ``;
+
+        div_mensagem2.innerHTML = `<b>Sua média de gols/partida é de ${média.toFixed(1)}</b>`;
+
+        if(média < 0.2 ){
+            div_mensagem.innerHTML = `Melhor mudar de posição`;
+            div_img.src = `ruim.png`;
+        }
+        if(média >= 0.2 ){
+            if(média <= 0.6){
+                div_mensagem.innerHTML = `Atacante mediano`;
+                div_img.src = `comum.png`;
+            }
+        
+        else{
+            div_mensagem.innerHTML = `Atacante de futuro`;
+            div_img.src = `bom.png`;
+        }
+        }
+        
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista09-q03</title>
+</head>
+<body>
+    <h1>Numeros Cabalísticos</h1>
+    Você clicou <b id="b_mensagem">0</b> vezes 
+    <button onclick="clicar()">Clique cabalístico</button>
+</body>
+</html>
+<script>
+    var vezes = 0;
+    
+
+    function clicar(){
+        vezes++;
+        b_mensagem.innerHTML = vezes;
+
+        if (vezes == 3 || vezes == 4 || vezes == 7 || vezes == 10 ){
+            alert(`Você clicou ${vezes} vezes e Juliana gosta desse número!`);
+        }
+    }
+</script>

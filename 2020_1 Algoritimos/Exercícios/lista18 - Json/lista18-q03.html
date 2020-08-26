@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista18-q03</title>
+</head>
+<body>
+    <h1>Poupança</h1>
+    Saldo: R$<b id="b_saldo">0.00</b><br>
+    Depositos: <b id="b_depositos">0</b><br>
+    Saques: <b id="b_saques">0</b><br>
+    <button onclick="depositar()">Depositar 100</button><br>
+    <button onclick="sacar()">Sacar 20</button><br>
+</body>
+</html>
+<script>
+    let saldo= 0;
+    let depositos = 0;
+    let saques = 0;
+
+    function depositar(){
+        const depositar_100 = {
+            saldo: 100,
+            deposito: 1
+        };
+        saldo += depositar_100.saldo;
+        b_saldo.innerHTML = saldo;
+        depositos += depositar_100.deposito;
+        b_depositos.innerHTML = depositos;
+    }
+    function sacar(){
+        const sacar20 = {
+            saldo: 20,
+            saques: 1
+        };
+        saldo -= sacar20.saldo;
+        b_saldo.innerHTML = saldo;
+        saques += sacar20.saques;
+        b_saques.innerHTML = saques;
+    }
+</script>

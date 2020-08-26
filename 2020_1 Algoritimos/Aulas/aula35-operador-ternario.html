@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 35</title>
+</head>
+<body>
+
+    <input placeholder="Sua idade" id="idade"> <br>
+
+    <button onclick="analisar_com_variavel()">E que eu sou?</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+function analisar() {
+    var valor_idade = Number(idade.value);
+
+    // aqui usamos o Operador Ternário.
+    // 1ª parte (antes da ?) - Teste lógico
+    // 2ª parte (após a ?) - Resultado se o teste for true (verdadeiro)
+    // 3ª parte (após os :) - Resultado se o teste for false (falso)
+    alert(valor_idade >=18 ? 'Você é maior de idade!' : 'Você é criança!');
+
+    div_resultado.innerHTML = valor_idade >=18 ? 'Você é maior de idade!' : 'Você é criança!';
+}
+
+function analisar_com_variavel() {
+    var valor_idade = Number(idade.value);
+
+    // Aqui usamos o operador ternário para dar valor a uma variável
+    var resultado = valor_idade >=18 ? 'Você é maior de idade!' : 'Você é criança!';
+
+    alert(resultado);
+    div_resultado.innerHTML = resultado;
+}
+</script>

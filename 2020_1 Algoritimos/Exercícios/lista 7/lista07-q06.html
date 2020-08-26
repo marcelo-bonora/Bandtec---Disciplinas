@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista07-q06</title>
+</head>
+<body>
+    <h1>Como não Engordar durante a Quarentena</h1>
+    <p>
+    Quantos pães tem comido por dia?<input id="pao" autofocus> <br><br>
+    Quantos pacotes de bolacha recheada tem comido por dia?<input id="bolacha"> <br><br>
+    Quantos copos de achocolatado tem tomado por dia?<input id="achocolatado"> <br><br>
+    </p>    
+
+    <button onclick="verificar()">Verificar calorias</button>
+<br>    
+    <div id="div_mensagem"></div>
+    <div>
+        <img id="div_img" style="height: 200px">
+    </div>
+
+</body>
+</html>
+<script>
+    function verificar(){
+        var calorias = (Number(pao.value) * 50) + (Number(bolacha.value) * 80) + (Number(achocolatado.value) * 70);
+        div_mensagem.innerHTML = ``;
+
+        if (calorias < 200){
+            div_mensagem.innerHTML = `Parabéns, vai sair em forma da quarentena!`;
+            div_img.src = `em_forma.png`;
+        }else if (calorias <= 400){
+            div_mensagem.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+            div_img.src = `levemente.png`;
+        }else {
+            div_mensagem.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena`;
+            div_img.src = `comi_demais.png`;
+        }
+    }
+</script>

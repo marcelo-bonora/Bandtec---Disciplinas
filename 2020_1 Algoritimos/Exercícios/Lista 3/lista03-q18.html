@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista 03 - q18</title>
+</head>
+<body>
+    
+<h3>Manifesto ágil</h3>
+
+<select id="frase" style="color: maroon;">
+    <option value="processos e ferramentas e mais indivíduos e interações">processos e ferramentas</option>
+    <option value="documentação abrangente e mais software em funcionamento">documentação abrangente</option>
+    <option value="negociação de contratos e mais colaboração com o cliente">negociação de contratos</option>
+    <option value="seguir um plano e mais responder a mudanças">seguir um plano</option>
+</select>
+
+<br><input placeholder="Seu nome" id="nome">
+
+    <br>
+    <button onclick="revelar()">
+        #partiuagilidade
+    </button>
+<div id="div_agilidade" style="color: blue;">
+</div>
+</body>
+</html>
+<script>
+function revelar() {
+    div_agilidade.innerHTML = `Então, ${nome.value}, valorize menos ${frase.value}`;
+}
+</script>

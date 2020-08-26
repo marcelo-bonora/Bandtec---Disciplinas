@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista03-q11/12</title>
+</head>
+<body>
+    <h1>Poder de um Guerreriros Sayajins</h1>
+    "KI base":<input id="ki_base" placeholder="(força base) do Sayajin" autofocus>
+    <br>"<b>Transformar em...</b>" 
+<br>
+    <button onclick="SSJ()">SSJ</button>
+    <button onclick="SSJ2()">SSJ</button>
+    <button onclick="SSJ3()">SSJ3</button>
+
+    <div id="div_mensagem" style="display: none">
+        Após sem transformar em <u id="u_tranformação"></u>, o ki desse Sayajin passa a ser de <u id="u_ki"></u>
+    </div>
+
+    <div>
+        <img id="idImg" style="height: 250px">
+    </div>
+    
+</body>
+</html>
+<script>
+
+    function SSJ() {
+        u_tranformação.innerHTML = "SSJ";
+
+        var ki = Number(ki_base.value) * 50;
+        u_ki.innerHTML = ki;
+
+        div_mensagem.style.display = "block";
+
+        idImg.src = 'SSJ.png';
+    }
+
+    function SSJ2() {
+        u_tranformação.innerHTML = "SSJ2";
+
+        var ki = Number(ki_base.value) * 100;
+        u_ki.innerHTML = ki;
+
+        div_mensagem.style.display = "block";
+
+        idImg.src = 'SSJ2.png';
+    }
+
+    function SSJ3() {
+        u_tranformação.innerHTML = "SSJ3";
+
+        var ki = Number(ki_base.value) * 200;
+        u_ki.innerHTML = ki;
+
+        div_mensagem.style.display = "block";
+
+        idImg.src = 'SSJ3.png';
+    }
+</script>

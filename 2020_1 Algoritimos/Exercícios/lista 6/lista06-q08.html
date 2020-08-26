@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista06-q08</title>
+</head>
+<body>
+    <h1>Temperatura do Ambiente</h1>
+    <input id="temp" placeholder="Qual é a temperatura?" autofocus>
+
+    <button onclick="verificar()">Verificar clima</button>
+    <div id="div_mensagem"></div>
+    <img id="div_img" style="height: 200px">
+
+</body>
+</html>
+<script>
+    function verificar() {
+        var temperatura = Number(temp.value);
+
+        div_mensagem.innerHTML = ``;
+
+        if (temperatura < 10 ) {
+            div_mensagem.innerHTML = `Temperatura apropriada pra conservar alimentos`;
+            div_img.src = `apropriado.png`;
+        }
+        else {
+            div_mensagem.innerHTML = `Temperatura inapropriada pra conservar alimentos`;
+            div_img.src = `inapropriado.png`;
+        }
+    }
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista20-q04</title>
+</head>
+
+<body>
+    <div>
+        Total da sua compra até agora: <span id="total">0</span> item(s) -> <span id="valor">Valor da compra</span> + tx
+        de entrega: <span id="preco">$0.00</span>
+    </div>
+
+    <button onclick="adicionar(5)">Queijo Mussarela </button><br>
+    <button onclick="adicionar(15)">Carne Bovina </button><br>
+    <button onclick="adicionar(12)">Carne Suina </button><br>
+    <button onclick="adicionar(25)">Carne Vegana </button><br>
+    <button onclick="adicionar(2.5)">Alface </button><br>
+    <button onclick="adicionar(3.5)">Tomate</button><br>
+    <button onclick="adicionar(5.75)">Refrigerante lata </button><br>
+    <button onclick="adicionar(4.5)">Caixinha de suco de batata doce com ameixa </button><br>
+    <button onclick="adicionar(0)">Zerar tudo e começar novamente </button><br>
+</body>
+
+</html>
+<script>
+    let v_item = 0;
+    let v_valor = 0;
+    let frete = 0;
+
+    function adicionar(quantidade) {
+        v_valor += quantidade;
+        frete += 4;
+        v_item++;
+        if (quantidade == 0) {
+            v_item = 0;
+            v_valor = 0;
+            frete = 0;
+        }
+
+        total.innerHTML = v_item;
+       
+        valor.innerHTML = v_valor.toFixed(2);
+        preco.innerHTML = frete.toFixed(2);
+
+        if (v_valor > 70) {
+            preco.innerHTML = `ENTREGA GRATIS`;
+        }
+    }
+</script>

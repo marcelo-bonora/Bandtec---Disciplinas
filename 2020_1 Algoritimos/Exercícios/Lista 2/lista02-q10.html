@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exerciccio 10</title>
+</head>
+<body>
+
+    <button onclick="Pare()";>
+        Pare
+    </button>
+
+    <button onclick="Pense()";>
+        Pense
+    </button>
+
+    <button onclick="Siga()";>
+        Sigla
+    </button>
+        
+    <div id="div_altere"></div>
+  
+
+</body>
+</html>
+
+<script>
+
+    function Pare() {
+        div_altere.innerHTML = "Pare e aguarde!";
+        div_altere.style.color = 'white';
+        div_altere.style.backgroundColor = 'red';
+    }
+    function Pense() {
+        div_altere.innerHTML = "Pense se pode seguir ou se deve parar!";
+        div_altere.style.color = 'yellow';
+        div_altere.style.backgroundColor = 'black';
+    }
+    function Siga() {
+        div_altere.innerHTML = "Pode seguir adiante :)";
+        div_altere.style.color = 'green';
+        div_altere.style.backgroundColor = 'white';
+    }
+    
+</script>

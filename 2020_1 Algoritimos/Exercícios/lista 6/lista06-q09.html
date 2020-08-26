@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista06-q09</title>
+</head>
+<body>
+    <h1>Arroz Cozido</h1>
+    <input id="temp_arroz" placeholder="Quanto tempo? (min)" autofocus>
+
+    <button onclick="provar()">Provar Arroz</button>
+    <div id="div_mensagem"></div>
+    <img id="div_img" style="height: 200px">
+        
+    
+</body>
+</html>
+<script>
+    function provar() {
+        var tempo = Number(temp_arroz.value);
+        div_mensagem.innerHTML = ``;
+        
+
+        if (tempo == 5){
+            div_mensagem.innerHTML = `Parabéns! Arroz perfeito!`;
+            div_img.src = `perfeito.png`;
+        }
+        else{
+            div_mensagem.innerHTML = `Arroz cru ou cozido demais!`;
+            div_img.src = `queimado.png`;
+        }
+    }
+</script>

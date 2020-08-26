@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - Exercício 04</title>
+</head>
+<body>
+    <h3>Calculo da Média</h3>
+    Insira o valor da primeira nota: <input id="valor1"> <br>
+    Insira o valor da segunda nota: <input id="valor2"> <br>
+    <br>
+
+    <button onclick="media()">Calcular média</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+function media() {
+    div_resultado.innerHTML = `Sua média foi ${(Number(valor1.value) + Number(valor2.value))/2}`;
+}
+
+</script>

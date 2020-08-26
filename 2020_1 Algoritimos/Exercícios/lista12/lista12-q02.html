@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista12-q02</title>
+</head>
+<body>
+    <h1>    Algo sobre a quarentena   </h1>
+    <button onclick="clicar()">Diga algo sobre a quarentena</button>
+    <div id="div_msg"></div>
+    
+
+    
+</body>
+</html>
+<script>
+    var contador = 1;
+
+    function clicar(){
+        div_msg.innerHTML = ``;
+        while (contador < 8){
+            div_msg.innerHTML += `${contador}A quarentena está ficando chata<br>`;
+            contador++;
+        }
+    }
+</script>

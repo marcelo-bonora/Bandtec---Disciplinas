@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista20-q03</title>
+</head>
+
+<body>
+    <div id="barra_azul" style="height: 20px; width: 600px; background-color: blue"></div>
+    <button onclick="apanhar(-25, 0)">Apanhar devagar</button>
+    <button onclick="apanhar(-80, 0)">Apanhar forte</button>
+    <button id="concentrar_blue" onclick="apanhar(10, 0)">Concentrar e ganhar</button>
+    <br><br>
+    <div id="barra_red" style="height: 20px; width: 600px; background-color: red"></div>
+    <button onclick="apanhar(0,-25)">Apanhar devagar</button>
+    <button onclick="apanhar(0,-80)">Apanhar forte</button>
+    <button id="concentrar_red" onclick="apanhar(0,10)">Concentrar e ganhar</button>
+</body>
+
+</html>
+<script>
+    let azul = 600;
+    let red = 600;
+    function apanhar(v_azul, v_red) {
+        azul += v_azul;
+        barra_azul.style.width = `${azul}px`;
+
+        red += v_red;
+        barra_red.style.width = `${red}px`;
+
+        if (azul < 0){
+            azul = 0;
+            concentrar_blue.style.display = "none";
+        } if (red < 0){
+            red = 0;
+            concentrar_red.style.display = "none";
+        }
+    }
+</script>

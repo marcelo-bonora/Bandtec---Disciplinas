@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q01/04</title>
+</head>
+<body>
+    <h1>Refrigerante</h1>
+    Quantidade de latinhas de refrigerante:<input id="qtd_refrigerante" autofocus placeholder="0">
+<br>
+    <button onclick="refris()">Quantos Refris?</button>
+    
+    <div id="div_mensagem"></div>
+    
+
+</body>
+</html>
+<script>
+    function refris() {
+        var refrigerante = Number(qtd_refrigerante.value);
+        var ano = refrigerante * 365;
+        div_mensagem.innerHTML = `Você consome por ano ${ano} por ano`;
+
+        if (ano >= 500) {
+            div_mensagem.innerHTML += `<br><span style="background-color: red; color: white" >Cuidado com a diabetes!</span>`;
+        }
+    }
+</script>

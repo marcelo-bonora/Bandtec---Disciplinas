@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 23</title>
+</head>
+<body>
+    
+ <input id="numero" placeholder="Número qualquer" autofocus>
+ 
+ <button onclick="potencia2()">
+     Elevar ao Quadrado
+ </button>
+
+ <button onclick="aumentar1()">
+     Aumentar em 1
+ </button>
+
+ <button onclick="reduzir1()">
+    Reduzir em 1
+ </button>
+
+ <button onclick="aumentar1simples()">
+    Aumentar em 1 (método simples)
+ </button>
+
+ <button onclick="reduzir1simples()">
+    Reduzir em 1 (método simples)
+ </button>
+
+</body>
+</html>
+<script>
+
+function potencia2() {
+    // o operador ** efetua a potência
+    // no ex abaixo, fizemos um número elevado a 2
+    var resultado = Number(numero.value) ** 2;
+
+    alert(resultado);
+}
+
+function aumentar1() {
+    // guardando o valor digitado em 'numero'
+    // convertido em número em 'valor_numero'
+    var valor_numero = Number(numero.value);
+
+    // aumentando o valor da variável em 1
+    valor_numero += 1;
+    // se, au invés de 1 fosse outro número
+    // seria esse valor que seria adicionado
+
+    alert(valor_numero);
+}
+
+function reduzir1() {
+    // guardando o valor digitado em 'numero'
+    // convertido em número em 'valor_numero'
+    var valor_numero = Number(numero.value);
+
+    // reduzindo o valor da variável em 1
+    valor_numero -= 1;
+    // se, au invés de 1 fosse outro número
+    // seria esse valor que seria reduzido
+
+    alert(valor_numero);
+}
+
+function aumentar1simples() {
+    var valor_numero = Number(numero.value);
+
+    // aumentando o valor da variável em 1
+    valor_numero++;
+
+    alert(valor_numero);
+}
+
+function aumentar1simples() {
+    var valor_numero = Number(numero.value);
+
+    // reduzindo o valor da variável em 1
+    valor_numero--;
+
+    alert(valor_numero);
+}
+
+</script>

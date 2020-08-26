@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista04-q10</title>
+</head>
+<body>
+    <h1>Cartão Fidelidade</h1>
+
+    <button onclick="pass8()">08 passagens</button>
+    <button onclick="pass20()">20 passagens</button>
+    <button onclick="pass50()">50 passagens</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+    
+function pass8() {
+    var n_passagens = 8;
+
+    var economizou = (1 - 32.48 / 35.2) * 100;
+
+    var bonus = (35.2 - 32.48) / 4.4;
+
+    mensagem.innerHTML = `Ao comprar <b>${n_passagens}</b> passagens, você pagou <b>${economizou.toFixed(2)}</b>% a menos. É como se tivesse ganhado <b>${bonus.toFixed(2)}</b> passagens de "bônus".`
+}
+
+function pass20() {
+    var n_passagens = 20;
+
+    var economizou = (1 - 78.6 / 88) * 100;
+
+    var bonus = (88 - 78.6) / 4.4;
+
+    mensagem.innerHTML = `Ao comprar <b>${n_passagens}</b> passagens, você pagou <b>${economizou.toFixed(2)}</b>% a menos. É como se tivesse ganhado <b>${bonus.toFixed(2)}</b> passagens de "bônus".`
+}
+
+function pass50() {
+    var n_passagens = 50;
+
+    var economizou = (1 - 191.5 / 220) * 100;
+
+    var bonus = (220 - 191.5) / 4.4;
+
+    mensagem.innerHTML = `Ao comprar <b>${n_passagens}</b> passagens, você pagou <b>${economizou.toFixed(2)}</b>% a menos. É como se tivesse ganhado <b>${bonus.toFixed(2)}</b> passagens de "bônus".`
+}
+
+
+
+</script>

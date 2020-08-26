@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista20-01</title>
+</head>
+
+<body>
+    <button onclick="adicionar(85)">Entrou Homem</button>
+    <button onclick="adicionar(70)">Entrou Mulher</button>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+    let total = 0;
+    function adicionar(valor_peso) {
+        total += valor_peso;
+        if (total > 800) {
+            div_msg.innerHTML = `O elevador não pode se mover, já que ta com ${total}kg e o limite é 800kg`;
+        } else {
+            div_msg.innerHTML = `O elevador pode se mover, peso atual ${total}kg`;
+        }
+    }
+</script>

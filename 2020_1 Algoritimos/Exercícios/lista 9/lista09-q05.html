@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista09-q05</title>
+</head>
+<body>
+    <h1>Simulador do Tinder</h1>
+    <select id="cabelo">
+        <option value="preto">Preto</option>
+        <option value="vermelho">Vermelho</option>
+        <option value="amarelo">Amarelo</option>
+        <option value="castanho">Castanho</option>
+    </select>
+    <input id="valor_altura" placeholder="Qual sua altura?">
+
+    <button onclick="avaliar()">Deu match?</button>
+    <div>
+        <img id="div_img" style="height: 300px">
+    </div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var altura = Number(valor_altura.value);
+
+        if (cabelo.value == 'preto' && altura >= 1.70 || cabelo.value == 'vermelho' && altura >= 1.70 ){
+            div_img.src = 'feliz.png';
+        }else{
+            div_img.src ='triste.png';
+        }
+    }
+</script>

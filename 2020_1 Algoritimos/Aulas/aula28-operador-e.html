@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 28</title>
+</head>
+<body>
+    
+    <input placeholder="Média" id="media"> <br>
+    <input placeholder="Frequência" id="frequencia"> <br>
+
+    <button onclick="avaliar()">Avaliar</button>
+
+</body>
+</html>
+
+<script>
+
+function avaliar() {
+    var valor_media = Number(media.value);
+    var valor_frequencia = Number(frequencia.value);
+
+    // aqui usamos o "e" (&&)
+    // É um operador lógico (ou conector lógico)
+    // nesse caso, o teste inteiro só é verdade se TODOS forem verdade
+    if (valor_media >= 6 && valor_frequencia >= 75) {
+        alert("Aprovado!");
+    } else {
+        alert("Reprovado!");
+    }
+}
+
+</script>

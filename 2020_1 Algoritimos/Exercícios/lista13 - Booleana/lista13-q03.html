@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista13-q03</title>
+</head>
+<body>
+    <h1>Nota e Frequencia do Aluno</h1>
+    <input placeholder="Insira sua nota" autofocus id="v_nota">
+    <br>
+    <input placeholder="Insira sua frequencia" id="v_freq">
+    <br>
+    <button onclick="avaliar()">Avaliar</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function avaliar(){
+
+        var nota = Number(v_nota.value);
+        var freq = Number(v_freq.value);
+
+        var frase = ``;
+
+        // variaveis booleana
+        var aprovado = nota >= 6 && nota >= 0 && freq >= 75 && freq <= 100;
+        var reprovado_n = nota < 6 && nota >= 0;
+        var reprovado_f = freq < 75 && freq >= 0;
+        var inva = nota < 0 || nota > 10 || freq < 0 || freq > 100;
+
+        
+        if (aprovado){
+            frase = `Parabéns, aprovado(a)!`;
+
+        }else{
+            if(reprovado_n){
+                frase = `Reprovado(a) por nota!<br>`;
+
+            }if (reprovado_f){
+                frase += `Reprovado(a) por frequência!`;
+            }
+            
+        }if(inva){
+            frase = ``;
+            frase = `Valor de <b>NOTA ou FREQUENCIA</b> invalido, digite novamente.`;
+            }
+
+        div_msg.innerHTML = frase;
+    }
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 26</title>
+</head>
+<body>
+    Quantos pontos na sua CNH? <input id="pontos"> <br>
+
+    <button onclick="calcular()">
+        Verificar multa
+    </button>
+
+    <div id="div_multas"></div>
+</body>
+</html>
+<script>
+
+function calcular() {
+    var valor_pontos = Number(pontos.value);
+
+    // limpado o local do resultado
+    div_multas.innerHTML = '';
+
+    var multa; // multa existe, mas sem valor
+
+    // num bloco IF-ELSE sempre ocorre que:
+    // OU o bloco IF é executado
+    // OU o bloco ELSE
+    // Jamais, em hipótese alguma, ambos são executados
+    // SEMPRE um dos 2 é executado
+
+    if (valor_pontos < 20) { 
+        multa = valor_pontos * 100;
+    } else { // senão, ou seja, se NÃO entrar no IF
+        // neste caso, o ELSE será executado caso valor_pontos >= 20
+        div_multas.innerHTML = 'Sua carteira está suspensa! <br>';
+        multa = valor_pontos * 150;
+    }
+
+    // o que está APÓS um IF-ELSE, SEMPRE será executado
+    div_multas.innerHTML += `Multa: R$${multa}`;
+   
+}
+
+</script>

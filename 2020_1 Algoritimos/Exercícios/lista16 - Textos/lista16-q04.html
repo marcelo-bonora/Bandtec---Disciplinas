@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista16-q04</title>
+</head>
+<body>
+    
+    <h1> E-mail - @ e .</h1>
+
+    <input placeholder="Insira seu e-mail" autofocus id="email" onkeyup="analisar()">    
+
+    <div id="div_msg">
+
+    </div>
+</body>
+</html>
+<script>
+
+    function analisar(){
+        var v_email = email.value;
+        div_msg.innerHTML = ``;  
+
+        div_msg.innerHTML = (v_email.trimStart().trimEnd().length >= 7 &&  v_email.indexOf('@' && '.') >= 0) ? 'E-mail OK :)' : 'E-mail inválido! :.(';
+    }
+
+</script>

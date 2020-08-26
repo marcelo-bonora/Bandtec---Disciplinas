@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista17-q01</title>
+</head>
+<body>
+    
+    <h1>Quanto anos vc tem?</h1>
+
+    <input placeholder="Data de nascimento mm/dd/aaaa" autofocus id="d_nasc">
+    <button onclick="ver()">Ver idade atual</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+
+    function ver(){ 
+        var niver = new Date(d_nasc.value);
+        div_msg.innerHTML = ``;
+
+        var agora = new Date().getTime();
+
+        var result = parseInt(Math.abs((((((niver  - agora) / 1000) / 60) / 60) / 24) / 365));
+        div_msg.innerHTML = `Você possui ${result} anos`;
+    }
+
+</script>

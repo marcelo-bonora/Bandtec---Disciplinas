@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q12</title>
+</head>
+<body>
+    <h1>Fato Histórico Sobre os E-MAIL</h1>
+    
+    <input id="epoca" placeholder="Insira o valor do ano" autofocus>
+
+    <button onclick="fato()">Ver Fato</button>
+    
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+    function fato() {
+        var ano =  Number(epoca.value);
+
+        if (ano < 1965 ) {
+            div_mensagem.innerHTML = `No ano ${ano} o email nem havia sido criado ainda ... `;
+        }
+        if (ano == 1965 ) {
+            div_mensagem.innerHTML = `No ano ${ano}  o email estava sendo criado ... `;
+        }
+        if (ano > 1965 ) {
+            div_mensagem.innerHTML = `No ano ${ano} o email já havia sido criado ... " `;
+        }
+        if (ano > 1969 ) {
+            div_mensagem.innerHTML = `No ano ${ano} o email já havia sido aprimorado - Poderia ser enviado para outro computador ...  `;
+        }
+    }
+</script>

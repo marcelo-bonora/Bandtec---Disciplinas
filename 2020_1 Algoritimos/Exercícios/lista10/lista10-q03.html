@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista10-q03</title>
+</head>
+<body>
+
+    <h1>    Jo-Ken-Pô    </h1>
+    <button onclick="jogar()">  Jogar  </button>
+    <div>
+        <img  id="div_img" style="height: 200px">
+    </div>
+
+</body>
+</html>
+<script>
+
+var numero = 0;
+
+    function jogar(){
+
+        numero = parseInt(Math.random()* 3 ) + 1;
+
+        if (numero == 1){
+            div_img.src = `pedra.png`;
+
+        } if (numero == 2){
+            div_img.src = `papel.png`;
+
+        }if (numero == 3){
+            div_img.src = `tesoura.png`;
+        }
+    }
+</script>

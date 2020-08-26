@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="laranja.png">
+    <link rel="stylesheet" href=continuada2.css>
+    <title>Laranjinha </title>
+</head>
+<body>
+    <h1>    Sorteio de Figurinhas   </h1>
+
+    Sorteios: <b id="b_sorteio">0</b>
+    <br>
+    Total gasto: R$ <b id="b_Total_gasto">0.00</b>
+    <br>
+    Total de ganho: R$<b id="b_ganhou">0.00</b>
+    <br>
+    Qual fruta você escolhe? 
+    <select id="valor_frutas">
+        <option value="1">Melancia</option>
+        <option value="2">Banana</option>
+        <option value="3">Cereja</option>
+        <option value="4">Laranja</option>
+    </select>
+    <button onclick="pagar()">Pagar R$2,00 e Sortear</button>
+
+    <div id="div_msg"></div>
+    
+    <div style="clear: both">
+    No ultimo jogo você ganhou R$<b id="b_lucro">0.00</b>
+    </div>
+
+<footer>Desenvolvido por Marcelo Bonora - CCO </footer>
+</body>
+</html>
+<script>
+
+var sorteios = 0;
+var gasto = 0;
+var ganhou = 0;
+
+    function pagar(){
+         sorteios++;
+         b_sorteio.innerHTML = sorteios;
+         
+        gasto = gasto +2;
+        b_Total_gasto.innerHTML = gasto.toFixed(2);
+
+        var contador = 0;
+
+        div_msg.innerHTML = ``;
+
+        var frutas = valor_frutas.value;
+
+        var qtd = 0;
+
+         while (contador < 4) {
+            contador++;
+
+            var numero = parseInt(Math.random() * 4) + 1;
+
+            if (numero < 0){
+                numero = 1;
+            } if (numero > 4){
+                numero = 4;
+
+            }if (numero == 1){
+                div_msg.innerHTML += `<img src="melancia.png" style="height: 200px; width: 200px; float: left;">`;
+
+            } else if (numero == 2){
+                div_msg.innerHTML += `<img src="banana.png" style="height: 200px; width: 200px; float: left;">`;
+            
+            } else if (numero == 3){
+                div_msg.innerHTML += `<img src="cereja.png" style="height: 200px; width: 200px; float: left;">`;
+            
+            } else if (numero == 4){
+                div_msg.innerHTML += `<img src="laranja.png" style="height: 200px; width: 200px; float: left;">`;
+            }
+
+         if (frutas == numero){
+             qtd++;
+         }
+        } 
+
+        var lucro = 0;
+
+            if (qtd == 0){
+            var lucro = 0.00;        
+         } else if (qtd == 1){
+            var lucro = 1.50;
+         } else if (qtd == 2){
+            var lucro = 5.00;
+         } else if (qtd == 3){
+            var lucro = 21.00;
+         } else if (qtd == 4){
+            var lucro = 50.00;
+         }
+        
+         b_lucro.innerHTML = lucro.toFixed(2);
+
+         ganhou = ganhou + lucro;
+         b_ganhou.innerHTML = ganhou.toFixed(2);                       
+    }
+</script>

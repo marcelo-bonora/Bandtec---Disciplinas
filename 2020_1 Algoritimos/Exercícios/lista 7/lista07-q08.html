@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista07-q08</title>
+</head>
+<body>
+    <h1>O Quão Habilidoso é no Click?</h1>
+    
+    Você já clicou <b id="div_b">0</b> vezes
+    <button onclick="clicar()">Clica neu</button>
+    
+    <div id="div_mensagem"></div>
+    
+    
+</body>
+</html>
+<script>
+    var vezes = 0
+
+    function clicar() {
+        
+        vezes++;
+        div_b.innerHTML = vezes;
+
+        if(vezes < 5){
+            div_mensagem.innerHTML = `Dedo fraquinho, hein`;
+        }else if (vezes <= 10){
+            div_mensagem.innerHTML = `Dedo bom, mano`;
+        }else if (vezes <= 15){
+            div_mensagem.innerHTML = `Gosta de clicar, hein!`;
+        }else{
+            div_mensagem.innerHTML = `Eita dedo nervoso!`;
+        }
+    }
+</script>

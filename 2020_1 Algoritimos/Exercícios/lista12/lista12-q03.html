@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista12-q03</title>
+</head>
+<body>
+    <h1>Time de Futebol Bom e o Ruim</h1>
+    <input id="time1" placeholder="Qual time é bom?" autofocus>
+    <input id="time2" placeholder="Qual time é ruim?">
+
+    <button onclick="repetir()">Repetir a realidade</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+
+    function repetir(){
+        var contador = 0;
+        div_msg.innerHTML = ``;
+        var timebom = time1.value;
+        var timeruim = time2.value;
+        while (contador < 10){
+            div_msg.innerHTML += `<b>${timebom}</b> é melhor do que o <b>${timeruim}</b><br>`;
+            contador++;
+        }
+    }
+</script>

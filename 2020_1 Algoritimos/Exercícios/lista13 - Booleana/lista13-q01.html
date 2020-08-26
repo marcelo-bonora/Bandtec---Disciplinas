@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista13-q01.html</title>
+</head>
+<body>
+    <h1>Login e Senhas</h1>
+        <input id="valor_login" placeholder="Login" autofocus>
+        <br>
+        <input id="valor_senha" placeholder="Senha">
+        <br>
+        <button onclick="entrar()">Entrar</button>
+        <div id="div_msg"></div>
+        
+</html>
+<script>
+    function entrar(){
+        var login = valor_login.value;
+        var senha = valor_senha.value;
+
+        var frase = ``;
+        var cor;
+
+        // variaveis booleanas
+        var l_ogin = login == 'aidimin';
+        var s_enha = senha == 'seinha';
+
+        if (l_ogin && s_enha){
+            frase = `Usuário autenticado com sucesso!`;
+            cor = `blue`;
+
+        }else {
+            cor = `red`;
+            if (!l_ogin) {
+                frase = `Seu login está inválido! <br>`;
+            }
+            if (!s_enha){
+                frase += `Sua senha está inválida!`;
+            }
+        }if (l_ogin && !s_enha){
+            alert("Entre em contato com o suporte para recuperar sua senha");
+        }
+
+        div_msg.style.color = cor;
+        div_msg.innerHTML = frase;
+   
+    }
+</script>

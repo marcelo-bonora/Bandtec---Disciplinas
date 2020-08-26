@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceito Boolean</title>
+</head>
+<body>
+    
+    <input placeholder="Qual sua idade?" id="idade">
+    <button onclick="analisar()">Analisar</button> <br>
+    <div>
+        Já passou pela infância: <b id="b_infancia">?</b> <br>
+        Já passou pela adolescência: <b id="b_adolescencia">?</b> <br>
+        Já passou pela fase adulta: <b id="b_adulto">?</b> <br>
+        Já passou entrou na melhor idade: <b id="b_melhor">?</b> <br>
+    </div>
+    Pontos: <b id="b_pontos">?</b>
+    <div id="espinhas"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var valor_idade = Number(idade.value);
+
+        // variáveis BOOLEANAS, ou seja, que só comportam true ou false
+        var ja_infancia = valor_idade > 9;
+        var ja_adolescente = valor_idade > 18;
+        var ja_adulto = valor_idade > 50;
+        var ja_melhor = valor_idade > 55;
+
+        // assim, essas 4 variáveis, poderão ser consultadas quantas vezes for necessário
+        // e sempre devolverão o true ou false do teste que as originou
+
+        var sim = 'Sim';
+        var nao = 'Não';
+        b_infancia.innerHTML = ja_infancia ? sim : nao;
+        b_adolescencia.innerHTML = ja_adolescente ? sim : nao;
+        b_adulto.innerHTML = ja_adulto ? sim : nao;
+        b_melhor.innerHTML = ja_melhor ? sim : nao;
+
+        var pontos = 0;
+
+        if (ja_infancia) {
+            espinhas.innerHTML = '';
+            pontos += 2;
+        } else {
+            espinhas.innerHTML = '';
+        }
+        if (ja_adolescente) {
+            espinhas.innerHTML = 'Você já passou pela fase de muitas espinhas!';
+            pontos += 8;
+        }
+        if (ja_adulto) {
+            pontos += 20;
+        }
+        if (ja_melhor) {
+            pontos += 30;
+        }
+
+        b_pontos.innerHTML = pontos;
+
+        
+    }
+</script>

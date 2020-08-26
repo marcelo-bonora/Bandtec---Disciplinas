@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 11 - Javascript com id e innerHTML</title>
+</head>
+
+<body>
+
+    <h3>Fala muito na própria página</h3>
+
+    <button onclick="falar_coisas_boas()">
+        Falar coisas boas
+    </button>
+
+    <button onclick="fofocar()">
+        Fofocar
+    </button>
+
+    <button onclick="falar_da_bandtec()">
+        Falar da Bandtec
+    </button>
+
+<!-- 
+    A div abaixo tem um id
+    Assim, pode ser manipulado pelo Javascript 
+    na tag <script> abaixo 
+-->
+    <div id="div_mensagem">
+
+    </div>Documentgo em Javascript -->
+<script>
+    function falar_coisas_boas() {
+        // pegamos o "div_mensagem" que é o id de alguma tag do nosso HTML
+        // o innerHTML é o CORPO de uma tag.
+        // se usamos = após ele, alteramos o corpo de uma tag
+        div_mensagem.innerHTML = 'Força, foco e fé!';
+    }
+
+    function fofocar() {
+        div_mensagem.innerHTML = 'Faz 2 anos que o Jesus não corta o cabelo!';
+    }
+
+    function falar_da_bandtec() {
+        div_mensagem.innerHTML = 'O Tiago é muito alto! <br> A Marise é portuguesa! <br> Estamos aprendendo Javascript!';
+    }
+</script>

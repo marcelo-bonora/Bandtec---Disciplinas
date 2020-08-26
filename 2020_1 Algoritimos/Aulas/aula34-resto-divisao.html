@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 34</title>
+</head>
+<body>
+    
+    <input placeholder="Digite um número" id="numero1"> <br>
+    <input placeholder="Digite um outro número" id="numero2"> <br>
+
+    <button onclick="divisivel()"> O 1º é divisível pelo 2º?</button>
+
+    <button onclick="quem_e_quem()">Quem é quem?</button>
+
+</body>
+</html>
+<script>
+    function divisivel() {
+        var valor_num1 = Number(numero1.value);
+        var valor_num2 = Number(numero2.value);
+
+        // verificando o RESTO da divisão entre o 1º e o 2º número
+        if (valor_num1 % valor_num2 == 0) {
+            alert(`Sim! ${valor_num1} é divisível por ${valor_num2}`);
+        } else {
+            alert('Não!');
+        }
+    }
+
+    function quem_e_quem() {
+        var valor_num1 = Number(numero1.value);
+        var valor_num2 = Number(numero2.value);     
+
+        // verificando o RESTO da divisão entre o 1º número e o número 2 (dois)
+        if (valor_num1 % 2 == 0) {
+            alert(`O ${valor_num1} é par!`);
+        } else {
+            alert(`O ${valor_num1} é impar!`);
+        }
+
+        // verificando o RESTO da divisão entre o 2º número e o número 2 (dois)
+        if (valor_num2 % 2 == 0) {
+            alert(`O ${valor_num2} é par!`);
+        } else {
+            alert(`O ${valor_num2} é impar!`);
+        }
+    }
+</script>

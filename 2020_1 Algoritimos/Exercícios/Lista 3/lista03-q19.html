@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista03-q19</title>
+</head>
+<body>
+    <h1>Time de São Paulo</h1>
+
+    <select id="time">
+        <option value="https://static3.tcdn.com.br/img/img_prod/311840/mouse_pad_sao_paulo_escudo_30105_1_20191126163718.jpg">São Paulo</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Santos_logo.svg/784px-Santos_logo.svg.png">Santos</option>
+        <option value="https://static3.tcdn.com.br/img/img_prod/311840/mouse_pad_corinthians_escudo_recortado_30072_1_20191126170615.jpg">Corinthians</option>
+        <option value="https://i.pinimg.com/originals/fe/cb/91/fecb913df4bec141af0e8458973aa0d8.png">Palmeiras</option>
+    </select>
+    <!-- O values podem ser imagens -->
+    <button onclick="escudo()">
+        Ver escudo
+    </button>
+    <br>
+    <img id="imagem" style="height: 200px;">
+
+</body>
+</html>
+<script>
+    function escudo() {
+        imagem.src = time.value;
+
+    }
+</script>

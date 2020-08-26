@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista11-q05</title>
+</head>
+<body>
+    <h1>Calculo de Média</h1>
+
+    <input id="valor_nota01" placeholder="Valor da nota 1" autofocus>
+    <input id="valor_nota02" placeholder="Valor da nota 2">
+
+    <button onclick="avaliar()">Verificar resultado</button>
+
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function avaliar(){
+        var nota1 = Number(valor_nota01.value);
+        var nota2 = Number(valor_nota02.value);
+        
+        var média = (nota1 + nota2) / 2;
+
+        div_msg.innerHTML = média < 6 ? `Infelizmente reprovado` : div_msg.innerHTML = média <= 7.5 ? `Aprovado - Automação, Seg ou Testes` : `Aprovado - Dev`; 
+    }
+</script>

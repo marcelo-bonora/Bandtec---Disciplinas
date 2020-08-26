@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista04-q13</title>
+</head>
+<body>
+
+    <h1>Calculo de Calorias Diarias</h1>
+    
+    <div>
+        <br>Porções de pão francês: <u id="u1">0</u>  
+
+        <br>Porções de carne boniva: <u id="u2">0</u>  
+
+        <br>Porções de carne de soja: <u id="u3">0</u>  
+
+        <br>Porções de arroz com feijão: <u id="u4">0</u>  
+
+        <br><b>Total de calorias:</b>   <u id="u5">0</u>    
+    </div>
+<br>    
+    <button onclick="pão()">Comer um pão francês</button><br><br>
+
+    <button onclick="carne_bovina()">Comer porção de carne boniva</button><br><br>
+
+    <button onclick="carne_soja()">Comer porção de carne de soja</button><br><br>
+
+    <button onclick="arroz()">CComer porção de arroz com feijão</button><br><br>
+
+    <button onclick="recomeçar()">Recomeçar</button><br><br>    
+
+</body>
+</html>
+<script>
+
+function pão() {
+    var contador = Number(u1.innerHTML);
+    contador++;
+    u1.innerHTML = contatdor;
+}
+
+</script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prova 13.06.2020 - Marcelo Vito - CCO</title>
+</head>
+<body>
+    <input type="text" id="nome1" placeholder="Nome do 1ºArts" autofocus><br>
+    <input type="text" id="musica1" placeholder="Musica do 1ºArts"><br>
+    <input type="text" id="data1" placeholder="Data lança. da musica (mm/dd/aaaa)"><br>
+    <br><br>
+    <input type="text" id="nome2" placeholder="Nome do 1ºArts" autofocus><br>
+    <input type="text" id="musica2" placeholder="Musica do 1ºArts"><br>
+    <input type="text" id="data2" placeholder="Data lança. da musica (mm/dd/aaaa)"><br>
+    <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br><br>
+    <button id="b_artista1" style="display: none" onclick="Artista1()">Artista1 (+50 Views)</button><br>
+    <button id="b_artista2" style="display: none" onclick="Artista2()">Artista2 (+50 Views)</button>
+    <br><br>
+    <div id="div_msg1" style="display: none">
+            Visualização da musica <b id="b_musica1"></b> de <b id="b_nome1"></b>: <u id="u_views1"></u> (Média de <b id="b_media1"></b> views/dia)
+            <br>
+            Visualização da musica <b id="b_musica2"></b> de <b id="b_nome2"></b>: <u id="u_views2"></u> (Média de <b id="b_media2"></b> views/dia)
+    </div>
+    <div id="div_msg2"></div>
+</body>
+</html>
+<script>
+    let views1 = 0;
+    let views2 = 0;
+    
+    function cadastrar(){
+        b_artista1.style.display = 'block';
+        b_artista2.style.display = 'block';
+        div_msg1.style.display = `block`;
+        views1 = 0;
+        views2 = 0;
+        // JSON DO PRIMEIRO ARTISTA CADASTRADO E SEUS DADOS
+        let artista1 = {
+            nome: nome1.value,
+            musica: musica1.value,
+            data: data1.value
+        };
+        b_musica1.innerHTML = artista1.musica;
+        b_nome1.innerHTML = artista1.nome;
+        u_views1.innerHTML = views1;
+        b_media1.innerHTML = 0.0;
+        // JSON DO SEGUNDO ARTISTA CADASTRADO E SEUS DADOS
+        let artista2 = {
+            nome: nome2.value,
+            musica: musica2.value,
+            data: data2.value
+        };
+        b_musica2.innerHTML = artista2.musica;
+        b_nome2.innerHTML = artista2.nome;
+        u_views2.innerHTML = views2;
+        b_media2.innerHTML = 0.0;
+    }
+    function Artista1(){
+        views1 += 50;
+        u_views1.innerHTML = views1;
+        let data = new Date (data1.value);
+        let media1 = (views1/ Math.abs((((((data - new Date)/ 1000) / 60) / 60) / 24))).toFixed(1);
+        b_media1.innerHTML = media1;
+        // div_msg1.innerHTML = `Visualização da musica <b>${artista1.musica}</b> de <b>${artista1.nome}</b>: <u>${views1}</u> (Média de <b>${(views1/ Math.abs((((((data - new Date)/ 1000) / 60) / 60) / 24))).toFixed(1)}</b> views/dia)`;
+    }
+    function Artista2(){
+        views2 += 50;
+        u_views2.innerHTML = views2;
+        let data = new Date (data2.value);
+        let media2 = (views2/ Math.abs((((((data - new Date)/ 1000) / 60) / 60) / 24))).toFixed(1);
+        b_media2.innerHTML = media2;
+        // div_msg2.innerHTML = `Visualização da musica <b>${artista2.musica}</b> de <b>${artista2.nome}</b>: <u>${views2}</u> (Média de <b>${(views2/ Math.abs((((((data - new Date)/ 1000) / 60) / 60) / 24))).toFixed(1)}</b> views/dia)`;
+    }
+</script>

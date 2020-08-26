@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista02-q18</title>
+</head>
+<body>
+    <h1>Os 4 grandes clubes de futebol de São Paulo</h1>   
+    
+    <img onclick="Corinthians()" src="Corinthians.png" style="height: 200px;">
+        <div id="C">
+        <img id="taça1" style="height: 100px;">
+        <img id="taça2" style="height: 100px;">
+        </div>
+
+    <img onclick="Santos()"  src="Santos.png" style="height: 200px;">
+        <div id="S">
+        <img id="taça3"  style="height: 100px;">
+        <img id="taça4"  style="height: 100px;">
+        </div>
+
+    <img onclick="São_Paulo()" src="São Paulo.png" style="height: 200px;">
+        <div id="SP">
+        <img id="taça5"  style="height: 100px;">
+        <img id="taça6" style="height: 100px;">
+        <img id="taça7" style="height: 100px;">
+        </div>
+
+    <img onclick="Palmeiras()" src="Palmeiras.png" style="height: 200px;">
+        <div id="P">
+        <img id="mundial" style="height: 200px;">
+        </div>
+<br>
+    <button onclick="resetar()">Resetar Programa</button>
+    <button id="esconder" onclick="Esconder_escudos()">Esconder escudos</button>
+    <button id="mostrar" onclick="Mostrar_escudos()"> Mostrar escudos</button>
+
+</body>
+</html>
+<script>
+    function Corinthians() {
+        taça1.src = 'taça.png';
+        taça2.src = 'taça.png';
+
+    }
+    function Santos() {
+        taça3.src = 'taça.png';
+        taça4.src = 'taça.png';
+    }
+    function São_Paulo() {
+        taça5.src = 'taça.png';
+        taça6.src = 'taça.png';
+        taça7.src = 'taça.png';
+    }
+    function Palmeiras() {
+        mundial.src = 'mundial.png';
+    }
+    function resetar() {
+        C.style.display = 'none';
+        S.style.display = 'none';
+        SP.style.display = 'none';
+        P.style.display = 'none';
+    }
+
+    function Esconder_escudos() {
+        C.style.display = 'none';
+        S.style.display = 'none';
+        SP.style.display = 'none';
+        P.style.display = 'none';
+        esconder.style.display = 'none'
+        mostrar.style.display = 'block';
+
+       
+    }
+    function Mostrar_escudos() {
+        C.style.display = 'block';
+        S.style.display = 'block';
+        SP.style.display = 'block';
+        P.style.display = 'block';
+        mostrar.style.display = 'none'
+        esconder.style.display = 'block';
+    }
+</script>

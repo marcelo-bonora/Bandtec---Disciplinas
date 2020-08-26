@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista15-q02</title>
+</head>
+<body>
+    
+    <h1>A sorte está ao seu lado?</h1>
+
+    <input  id="n_sorte" placeholder="0 a 100" autofocus>
+    <br>
+    <button onclick="testar()">Testar minha sorte</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    
+    function testar(){
+        var sorte = Number(n_sorte.value);
+        var c = 1;
+
+        while (c <= 20){
+            var n = parseInt(Math.random() * 101);
+            if(sorte == n){
+            break;
+            }
+            c++ 
+        }
+
+        if(c <= 20){
+            div_msg.innerHTML = `Muito bem, você é uma pessoa de sorte! Seu número saiu no ${c}º sorteio`;
+         } else{
+            div_msg.innerHTML = `É, você não tem muita sorte em sorteios, pelo visto`;  
+    }            
+}
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista07-q03</title>
+</head>
+<body>
+    <h1>Nota do Aluno</h1> 
+    <input id="nota" placeholder="Insira sua nota" autofocus>
+    <button onclick="classificar()">Classificar aluno </button>
+    <div  id="div_mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function classificar() {
+        var valor_nota = Number(nota.value);
+        div_mensagem.innerHTML =``;
+
+        if(valor_nota < 0){
+            div_mensagem.innerHTML = `Nota ${valor_nota} é invalida!`;
+
+        }else if(valor_nota < 5){
+            div_mensagem.innerHTML = `<span style="color:red"> O aluno precisa de muita ajuda</sapn>`;
+        } else if (valor_nota <= 7) {
+            div_mensagem.innerHTML = `<span style="color:orange">Aluno na média</span>`;
+        } else if (valor_nota <= 9.5){
+            div_mensagem.innerHTML = `<span style="color:green">Aluno acima da média</span>`;
+        } else if(valor_nota <= 10){
+            div_mensagem.innerHTML = `<span style="color:blue">Aluno fora da curva</span>`;
+        } else {
+            div_mensagem.innerHTML = `Nota ${valor_nota} é invalida!`;
+        }
+
+    }
+</script>

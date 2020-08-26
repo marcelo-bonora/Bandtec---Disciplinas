@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista13-q02</title>
+</head>
+<body>
+    <h1>Altura e Esporte</h1>
+    <input placeholder="Insira sua altura" autofocus id="valor_altura">
+    <button onclick="analisar()">Analisar para esportes</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function analisar(){
+
+        var altura = Number(valor_altura.value);
+
+        var frase = ``;
+
+        // variaveis booleanas
+        var piloto = altura < 1.6 && altura > 0;
+        var velejador = altura < 1.6  && altura > 0;
+        var jogador = altura >= 1.6 && altura <= 1.85;
+
+        if (piloto || velejador){
+            frase = `Pode tentar ser piloto(a) de corrida <br>`;
+            frase += `Pode tentar ser velejador(a)`;
+
+        } if (jogador){
+            frase = `Pode tentar ser jogador de futebol ou handbol`;
+        }
+
+        div_msg.innerHTML = frase;
+    }
+
+</script>

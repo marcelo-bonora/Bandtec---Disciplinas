@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista12-q09</title>
+</head>
+<body>
+    <h1>Amo meu Time</h1>
+    <button onclick="clicar()">Amo o escudo do meu time!</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    var contador = 0;
+    function clicar(){
+
+        while (contador < 8){
+            contador++;
+            div_msg.innerHTML += `<img id="div_img" src="corvinal.png" style="height: 200px; float: left;"><br>`;
+
+        }
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista19-q01</title>
+</head>
+
+<body>
+    <input placeholder="Filmes" id="filmes" autofocus>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br><br>
+    Seu filme favorito: <span id="filme_fav">Ainda não existe</span>
+    <br>
+    Seu terceiro filme favorito: <span id="terceiro">Ainda não existe</span>
+    <br>
+    Total de filmes cadastrados: <span id="total">0</span>
+</body>
+
+</html>
+<script>
+    let filme = [];
+
+    function cadastrar() {
+        filme.push(filmes.value);
+
+        total.innerHTML = `${filme.length}`;
+
+        filme_fav.innerHTML = `${filme[0]}`;
+
+        if (filme.length <= 2) {
+            terceiro.innerHTML = `Ainda não existe`;
+        } else {
+            terceiro.innerHTML = `${filme[2]}`;
+        }
+    }
+</script>

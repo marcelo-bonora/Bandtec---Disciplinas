@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 48 - Funções com vários parâmetros</title>
+</head>
+<body>
+    Total guardado: R$<b id="b_total">0.0</b>
+    <br><br>
+    <button onclick="depositar(0.5, 'Só tinha isso :(')">Depositar 0,50</button>
+    <button onclick="depositar(1, 'Só tenho 1,00 hoje')">Depositar 1,00</button>
+    <button onclick="depositar(2, 'Dei 2 e não reclama')">Depositar 2,00</button>
+    <button onclick="depositar(10, 'Dei 10, vc tá rico!')">Depositar 10,00</button>
+</body>
+</html>
+<script>
+    let total = 0;
+
+// função com 2 PARÂMETROS 
+function depositar(valor_depositado, frase) {
+    total += valor_depositado;
+    b_total.innerHTML = `${total.toFixed(2)} - ${frase}`;
+}
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q13</title>
+</head>
+<body>
+    <h1>Controle do Ar Condicionado</h1>
+
+    <input id="temp" placeholder="Valor da temperatura °C" autofocus>
+
+    <button onclick="ana()">Analisar Temperatura</button>
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+    function ana() {
+        var valor = Number(temp.value);
+        
+        if ( 21 < valor < 24) {
+            div_mensagem.innerHTML  = `<b>Temperatura confortável</b>`;
+        }
+        if (valor < 22) {
+            div_mensagem.innerHTML  = `<b>Temperatura desconfortável - está frio!</b>`;
+        }
+        if(valor > 23) {
+            div_mensagem.innerHTML  = `<b>Temperatura desconfortável - está calor!</b>`;
+        }
+    }
+
+</script>

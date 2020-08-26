@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 15 - Mostrando e escondendo (parte 2)</title>
+</head>
+
+<body>
+
+    <h3>Esconde e mostra elementos</h3>
+
+    Há segredos aqui! Cuidado! <br>
+
+    <button id="button_mostrar" onclick="mostrar_segredo()">Ver o segredo</button>
+    <button id="button_esconder" onclick="esconder_segredo()" style="display: none;">Esconder o segredo</button>
+
+    <br>
+    <span id="span_segredo" style="display: none;">
+        Você é senhor do que cala e escravo do que fala!
+    </span>
+
+</body>
+
+</html>
+
+<script>
+    function mostrar_segredo() {
+        // mostrando a span_segredo
+        span_segredo.style.display = 'block';
+
+        // ocultando o botão button_mostrar
+        button_mostrar.style.display = 'none';
+
+        // mostrando o botão button_esconder
+        button_esconder.style.display = 'block';
+    }
+
+    function esconder_segredo() {
+        // ocultado a span_segredo
+        span_segredo.style.display = 'none';
+
+        // mostrando o botão button_mostrar
+        button_mostrar.style.display = 'block';
+        
+        // ocultando o botão button_esconder
+        button_esconder.style.display = 'none';        
+    }
+</script>

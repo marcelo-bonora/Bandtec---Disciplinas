@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista09-q06</title>
+</head>
+<body>
+    <h1>Arroz Integral ou Branco</h1>
+    <select id="arroz">
+
+        <option value="branco.png">Arroz Branco</option>
+        <option value="integral.png">Arroz Integral</option>
+    </select>
+
+    <input id="valor_cozimento" placeholder="Temp. de Cozimento(min)">
+
+    <input id="valor_sal" placeholder="Qtd de Sal(g)">
+
+    <button onclick="avaliar()">Avaliar Arroz</button>
+
+    <div id="div_mensagem"></div>
+    <div>
+        <img id="div_img" style="height: 300px">
+    </div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var temp = Number(valor_cozimento.value);
+        var sal = Number(valor_sal.value);
+        
+
+        if (arroz.value == 'branco.png' && temp == 10  || arroz.value == 'integral.png' && temp == 20){
+            div_mensagem.innerHTML = `Arroz perfeito`;
+            div_img.src = arroz.value;
+
+        }else if(arroz.value == 'branco.png' && sal <= 10 || arroz.value == 'integral.png'  && sal <= 15) {
+            div_mensagem.innerHTML = `Arroz perfeito`;
+            div_img.src = arroz.value;
+            
+        }else {
+            div_mensagem.innerHTML = `Seu arroz não está perfeito`;
+            div_img.src = `bravo.png`;
+        }
+    }
+</script>

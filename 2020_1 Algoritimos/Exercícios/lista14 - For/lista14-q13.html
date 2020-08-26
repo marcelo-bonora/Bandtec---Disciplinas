@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista14-q13</title>
+</head>
+<body>
+    <h1>Ver sua sorte</h1>
+
+    <button onclick="ver()">Ver minha sorte</button>
+
+    <div id="div_img"></div>
+    <div id="div_msg" style="float: left"></div>
+
+</body>
+</html>
+<script>
+    function ver(){
+
+        div_img.innerHTML = ``;
+        div_msg.innerHTML = ``;
+
+
+        for(c = 1; c < 22; c++){
+            var n = parseInt(Math.random() * 2);
+
+            var coracao = 0;
+            var carta = 0;
+
+            if(n == 0){
+                div_img.innerHTML += ` <img src="coracao.png" style="height: 64px; width: 64px; float: left"> `;
+                coracao++;
+
+            } if(n == 1){
+                div_img.innerHTML += ` <img src="carta.png" style="height: 64px; width: 64px; float: left"> `;
+                carta++;
+            }
+        }
+        if(coracao > carta){
+            div_msg.innerHTML = `Você tem mais sorte no amor`;
+
+        }if (carta > coracao){
+            div_msg.innerHTML = `Você tem mais sorte no jogo`;
+        }
+    }
+</script>

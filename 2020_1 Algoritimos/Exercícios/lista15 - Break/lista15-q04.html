@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista15-q04</title>
+</head>
+<body>
+
+    <h1>Marvel ou DC</h1>
+
+    <select id="universo">
+
+        <option value="1">Marvel</option>
+        <option value="0">DC</option>
+
+    </select>   
+
+    <button onclick="ver()">Ver programação semanal na TV</button>
+
+    <div id="div_msg"></div>
+    
+</body>
+</html>
+<script>
+
+    function ver(){
+
+        var sorte = Number(universo.value);
+        
+        for(c = 1; c <= 5; c++){
+            var n = parseInt(Math.random() * 2);
+            if(sorte == n){
+            break;
+            }
+        }
+
+        if(c <= 5){
+            div_msg.innerHTML = `Você verá um filme que gosta no ${c}º dia`;
+         } else{
+            div_msg.innerHTML = `É, ou lê um livro ou assiste um filme que não gosta mesmo`;  
+        }         
+    }
+
+</script>

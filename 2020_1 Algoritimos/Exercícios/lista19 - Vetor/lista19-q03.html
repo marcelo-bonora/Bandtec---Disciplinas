@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista19-q03</title>
+</head>
+
+<body>
+    <input id="filme" placeholder="NOVO" autofocus>
+    <button onclick="cadastrar()">Cadastar</button>
+    <div id="div_msg"></div>
+</body>
+
+</html>
+<script>
+    let lista = [];
+    function cadastrar() {
+        div_msg.innerHTML = ``;
+        lista.push(filme.value);
+
+        for (let posicao = 0; posicao < lista.length; posicao++) {
+            div_msg.innerHTML += `${posicao + 1} - ${lista[posicao]} <br>`;
+        }
+    }
+</script>

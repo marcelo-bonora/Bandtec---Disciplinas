@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Questão1</title>
+</head>
+<body>
+
+    <h1>Star Wars - Jedi</h1>
+
+
+    <button onclick="Mac()"; id="Mace Windu.jpg">Mace Windu</button>
+    <button onclick="Yod()"; id="Yoda.jpg">Yoda</button>
+    <button onclick="Obi()"; id="Obi-Wan Kenobi.jpg" >Obi-Wan Kenobi</button>
+   
+
+    <div>
+            <img id="idImg" style="height: 222px;">
+    </div>
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+    function Mac() {
+        idImg.src= id="Mace Windu.jpg";
+        div_mensagem.innerHTML= 
+        `Planeta Natal: Haruun Kal
+        <br> Espécie: Korun (Humano) `;
+
+    }
+    
+    function Yod() {
+        idImg.src= id="Yoda.jpg";
+        div_mensagem.innerHTML= 
+        `Planeta Natal: Planeta remoto (Desconhecido)
+        <br> Espécie: Espécie de Yoda (Desconhecido)`;
+    }
+
+    function Obi() {
+        idImg.src= id="Obi-Wan Kenobi.jpg";
+        div_mensagem.innerHTML= 
+        `Planeta Natal: Stewjon
+        <br> Espécie: Humano `;
+    }
+</script>

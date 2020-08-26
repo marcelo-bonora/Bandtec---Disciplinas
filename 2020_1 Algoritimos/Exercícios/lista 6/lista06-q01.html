@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q15</title>
+</head>
+<body>
+    <h1>Autocescola - Novos Alunos</h1>
+    <input id="nome" placeholder="insiria seu nome" autofocus>
+    <input id="idade" placeholder="Insira sua idade">
+
+    <button onclick="avaliar()">Avaliar aluno</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function avaliar() {
+        var valor_idade = Number(idade.value);
+        
+
+        if (valor_idade >= 18){
+            div_mensagem.innerHTML = `${nome.value} vamos tirar a CNH?`; 
+        }
+        else {
+            div_mensagem.innerHTML = `${nome.value} vai jogar PlayStation!`;
+        }
+
+    }
+</script>

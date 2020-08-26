@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 39 - Break</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <hr>
+    <div id="div2"></div>
+</body>
+</html>
+<script>
+    
+    // ex: interrompendo um LOOP infinito
+    while (true) {
+        var sorteio = parseInt(Math.random()*100);
+        if (sorteio % 5 == 0) { // não quero ver números terminados em 0 ou 5!
+            break; // SE chegar nesta instrução, o loop MORRE imediatamente
+        }
+        div1.innerHTML += `Sorteado: ${sorteio} <br>`;
+    }
+
+    // ex: interrompendo um LOOP finito
+    for(var contador = 0; contador; contador++) {
+        var sorteio = parseInt(Math.random()*100);
+        if (sorteio % 5 == 0) { // não quero ver números terminados em 0 ou 5!
+            break; // SE chegar nesta instrução, o loop MORRE imediatamente
+        }
+        div2.innerHTML += `Sorteado: ${sorteio} <br>`;
+    }
+
+
+</script>

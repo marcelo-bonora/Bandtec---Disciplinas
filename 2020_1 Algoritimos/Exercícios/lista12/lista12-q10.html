@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista12-q10</title>
+</head>
+<body>
+    <h1>Dia de Musculção</h1>
+
+    <input id="quantidade" placeholder=" quantos em quantos dias o usuário faz musculação" autofocus>
+
+    <button onclick="clicar()"> Exibir rotina mensal </button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+
+
+    function clicar(){
+        div_msg.innerHTML = ``;
+        var contador = 0;
+        while (contador < 31){
+            contador++;
+          
+
+        var dias = Number(quantidade.value);
+        var conta1 = contador + dias 
+        var conta2 = conta1 + dias;
+
+            if (contador == conta2 || contador == conta1 || contador == 1){
+                div_msg.innerHTML += ` Dia ${contador}-<b>Musculação</b><br>`;
+            } else {
+                div_msg.innerHTML += `Dia ${contador}-Comer, dormir etc<br>`;
+            }
+        }
+    }
+</script>

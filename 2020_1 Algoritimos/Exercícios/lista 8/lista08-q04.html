@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista08-q04</title>
+</head>
+<body>
+    <h1>Será que és digno da mão da minha filha?</h1>
+    <input id="temp_trab" placeholder="Quantos anos trabalhou?" autofocus>
+    <input id="qtd_trigo" placeholder="Quantos kg de trigo rendeu?">
+    <input id="qtd_doente" placeholder="Quantidade de dias ausente">
+
+    <button onclick="verificar()">Deu match?</button>
+    <div id="div_mensagem"></div>
+    <div>
+        <img id="div_img" style="height: 300px">
+    </div>
+</body>
+</html>
+<script>
+    function verificar(){
+        var temp = Number(temp_trab.value);
+        var trigo = Number(qtd_trigo.value);
+        var ausente = Number(qtd_doente.value);
+
+        if (temp >= 5 && trigo >= 300 && ausente <= 5){
+            div_mensagem.innerHTML = `Minha filha será sua!`;
+            div_img.src = `noiva.png`;
+        }else {
+            div_mensagem.innerHTML = `Deu ruim! Trabalhe mais 2 anos`;
+            div_img.src = `furioso.png`;
+        }
+    }
+</script>

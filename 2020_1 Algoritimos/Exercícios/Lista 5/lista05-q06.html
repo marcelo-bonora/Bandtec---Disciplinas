@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q06</title>
+</head>
+<body>
+    <h1>Paulopolis Conta de LUZ</h1>    
+
+    <input id="kwh_mes" placeholder="kWh consumida no mês" autofocus>
+
+    <button onclick="calcular()">Calcular Conta de Luz</button>
+    
+</body>
+</html>
+<script>
+    function calcular() {
+        var mes = Number(kwh_mes.value)
+        var kwh = 0.85;
+        var valor = mes * kwh;
+
+        if (mes < 100) {
+            valor = (mes * kwh) * 0.9;
+        }
+        
+        alert (`O valor da conta a ser paga: R$${valor.toFixed(2)}`);
+
+    }
+</script>

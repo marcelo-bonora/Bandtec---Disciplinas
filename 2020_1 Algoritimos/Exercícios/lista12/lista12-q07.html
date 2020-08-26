@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista12-q07</title>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <select onchange="escolher()" id="valor_tabuada">
+        <option value="1">tab1</option>
+        <option value="2">tab2</option>
+        <option value="3">tab3</option>
+        <option value="4">tab4</option>
+        <option value="5">tab5</option>
+        <option value="6">tab6</option>
+        <option value="7">tab7</option>
+        <option value="8">tab8</option>
+        <option value="9">tab9</option>
+    </select>
+
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function escolher(){
+        var tabuada = Number(valor_tabuada.value);
+        var contador = 0;
+        div_msg.innerHTML = ``;
+
+
+        while(contador < 10){
+            contador++;
+            var conta = tabuada * contador;
+            div_msg.innerHTML += `${tabuada} x <u>${contador}</u> = <b>${conta}</b><br>`;
+        }
+
+    }
+</script>

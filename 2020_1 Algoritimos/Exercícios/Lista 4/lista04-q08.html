@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista04-q08</title>
+</head>
+<body>
+    <h1>Carro Financiado</h1>
+
+    Valor do carro a vista:<input id="avista"><br><br>
+    Valor da taxa de juros a.m. (ao mês):<input id="taxa"><br><br>
+    Quantidade de parcelas:<input id="parcelas"><br><br>
+
+    <button onclick="prejú()">Calcular Prejú</button>
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+    function prejú(){
+        var valor_avista = Number(avista.value);
+        var valor_juros = Number(taxa.value);
+        var valor_parcelas = Number(parcelas.value);
+
+        var primeira = valor_avista / valor_parcelas;
+        var razão_pg = 1 + (valor_juros/100);
+
+        var valor_1mes = valor_avista * 0.8;
+
+        var valor_total = primeira * (razão_pg ** valor_parcelas - 1 ) / (razão_pg - 1);
+
+        var valor_carros = valor_total / valor_avista;
+
+
+        mensagem.innerHTML = `Seu carro vai sair por um total de <b>R$${valor_total.toFixed(2)}</b>. Após 1 mês, ele já vai valer só <b>R$${valor_1mes.toFixed(2)}</b>.Porque comprou financiado, vai pagar o correspondente a <b>${valor_carros.toFixed(2)}</b> carros.`;
+    }
+</script><main></main>

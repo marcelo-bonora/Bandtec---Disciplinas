@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista18-q02</title>
+</head>
+<body>
+
+    <h1>Calcular pontos part2</h1>
+    <h3>Primeiro time</h3>
+    <input type="text" id="nome1" placeholder="Nome do time" autofocus>    
+    <input type="text" id="vit1" placeholder="Nº vit">
+    <input type="text" id="der1" placeholder="Nº der">
+    <input type="text" id="emp1" placeholder="Nº emp">
+    <h3>Segundo time</h3>
+    <input type="text" id="nome2" placeholder="Nome do time" autofocus>    
+    <input type="text" id="vit2" placeholder="Nº vit">
+    <input type="text" id="der2" placeholder="Nº der">
+    <input type="text" id="emp2" placeholder="Nº emp">
+    <br><br>
+    <button onclick="ver()">Analisar campanha</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function ver(){
+        div_msg.innerHTML = ``;
+
+        let time1 = {
+            nome: nome1.value,
+            vitorias: Number(vit1.value),
+            derrotas: Number(der1.value),
+            empates: Number(emp1.value)
+        };
+        let time2 = {
+            nome: nome2.value,
+            vitorias: Number(vit2.value),
+            derrotas: Number(der2.value),
+            empates: Number(emp2.value)
+        };
+        div_msg.innerHTML = `O time ${time1.nome} terminou o campeonato com ${time1.vitorias * 3 + time1.empates} pontos<br>
+                            O time ${time2.nome} terminou o campeonato com ${time2.vitorias * 3 + time2.empates} pontos`;
+    }
+</script>

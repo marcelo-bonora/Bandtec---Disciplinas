@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista04-q11</title>
+</head>
+<body>
+
+    <h1>Cofrinho</h1>
+    
+    Valor guardado no cofrinho:R$<span id="valor">0.00</span>
+<br>
+    Valor a ser depositado:<input id="R$" placeholder="R$">
+<br>
+<br>
+    <button onclick="depositar()">
+        Depositar
+    </button>
+    <button onclick="retirar()">
+        Tirar toda a grana
+    </button>
+
+</body>
+</html>
+<script>
+
+function depositar() {
+
+    var dinheiro = Number(valor.innerHTML);
+    
+    var adicionar =+ Number(R$.value) + dinheiro;
+
+    valor.innerHTML = adicionar;
+
+}
+
+function retirar() {
+
+    var dinheiro = Number(valor.innerHTML);
+
+    dinheiro = 0.00.toFixed(2);
+
+    valor.innerHTML = dinheiro;
+
+
+   
+
+}
+
+</script>

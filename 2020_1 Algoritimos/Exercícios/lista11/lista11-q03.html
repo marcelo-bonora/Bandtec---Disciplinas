@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista11-q03</title>
+</head>
+<body>
+    <h1>Mercado BOM DOCE</h1>
+
+    <input id="qtd_choco" placeholder="Insira o a quantidade de chocolates"  autofocus>
+
+    <button onclick="comprar()">Comprar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function comprar() {
+        var choco = Number(qtd_choco.value);
+        var preço = choco >=12 ? preço = choco * 2.50 : preço = choco * 3;
+
+        div_mensagem.innerHTML = choco >= 12 ? `O valor da sua compra foi de R$${preço.toFixed(2)}` 
+        :
+         `O valor da sua compra foi de R$${preço.toFixed(2)}`;
+
+    }
+</script>

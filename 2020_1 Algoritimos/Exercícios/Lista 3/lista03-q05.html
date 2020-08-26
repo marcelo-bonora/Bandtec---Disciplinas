@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - Exercício 05</title>
+</head>
+<body>
+    <h3>Valor de Passagens</h3>
+
+    Preço da passagem: <input id="preço"><br>
+    Viagens por mês: <input id="viagens"><br>
+
+    <button onclick="calcular_vt()">Calcular VT</button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+function calcular_vt() {
+    var calcular_vt = Number(preço.value) * Number(viagens.value);
+
+    div_resultado.innerHTML = `Você vai gastar <u>R$${calcular_vt}`;
+}
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista02-q12</title>
+</head>
+<body>
+    
+    <h1>"Brasil x Alemanha"</h1>
+
+    <button onclick="Gol_do_Brasil()";>
+         Gol do Brasil
+    </button>     
+    <span style="color: red; background-color: yellow;"></span> 
+
+    <button onclick="Gol_da_Alemanha()";>
+         Gol da Alemanha
+    </button> 
+    
+    <h3><b>Tempo real do jogo:</b></h3>
+
+    <div id="div_gol">
+    
+    
+</body>
+</html>
+
+<script>
+    
+    function Gol_do_Brasil() {
+        div_gol.innerHTML += ' <br>  <span style="color: green;">* É goooolll do Brasil!!!</span> ';
+       
+    }
+
+    function Gol_da_Alemanha() {
+        div_gol.innerHTML += ' <br> <span style="color: red; background-color: yellow;">* É goooolll da Alemanha!!!</sapn>';
+       
+    }
+
+</script>

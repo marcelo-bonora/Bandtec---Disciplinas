@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q11</title>
+</head>
+<body>
+    <h1> NETFLIX </h1>
+    Em que horario costuma acessar sua Netflix?<input id="hr" autofocus>
+
+    <button onclick="verificar()">Ver recomendação</button>
+
+    <div id="div_mensagem">
+
+    </div>
+</body>
+</html>
+<script>
+    function verificar() {
+        var horas = Number(hr.value);
+        div_mensagem.innerHTML = ``;
+
+        if (horas >= 19 ) {
+           div_mensagem.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${horas}!`;
+        }
+        if (horas <= 21){
+            div_mensagem.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${horas}!`;
+        }
+        if (horas > 21) {
+            div_mensagem.innerHTML = `O horário ${horas} é adequado para assistir sua série favorita!`;
+        }
+        if (horas < 19) {
+            div_mensagem.innerHTML = `O horário ${horas} é adequado para assistir sua série favorita!`;
+        }
+        if (horas > 24){
+            div_mensagem.innerHTML = `ERRO`;
+        }
+    }
+</script>

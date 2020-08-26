@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 40 - textos</title>
+</head>
+<body>
+    <h3>Operações com textos</h3>
+
+    <!-- onkeyup indica o que acontecer após usar uma tecla qualquer -->
+    <input placeholder="Digite uma frase" id="frase" onkeyup="analisar_textos()">
+    <br>
+    <div id="div_analises"></div>
+
+</body>
+</html>
+<script>
+    function analisar_textos() {
+        var valor_frase = frase.value;
+        div_analises.innerHTML = '';
+
+        div_analises.innerHTML += `Quantos caracteres? ${valor_frase.length} <br>`;
+        div_analises.innerHTML += `Tudo minúsculo: ${valor_frase.toLowerCase()} <br>`;
+        div_analises.innerHTML += `Tudo MAIÚSCULO: ${valor_frase.toUpperCase()} <br>`;
+        div_analises.innerHTML += `Começa com "a"?: ${valor_frase.startsWith('a')} <br>`;
+        div_analises.innerHTML += `Começa com "bom"?: ${valor_frase.startsWith('bom')} <br>`;
+        div_analises.innerHTML += `Termina com "a"?: ${valor_frase.endsWith('a')} <br>`;
+        div_analises.innerHTML += `Termina com "kkkk"?: ${valor_frase.endsWith('kkkk')} <br>`;
+        
+        div_analises.innerHTML += `Quero 10 letras iniciando com 0: ${valor_frase.padStart(10,'0')} <br>`;
+        div_analises.innerHTML += `Quero 10 letras terminando com 0: ${valor_frase.padEnd(10,'0')} <br>`;
+
+        div_analises.innerHTML += `Qual a 3ª letra? ${valor_frase[2]} <br>`;
+        div_analises.innerHTML += `Qual a 1ª letra? ${valor_frase[0]} <br>`;
+        div_analises.innerHTML += `Qual a última letra? ${valor_frase[valor_frase.length-1]} <br>`;
+
+        
+        div_analises.innerHTML += `Onde está a 1ª letra "a"? ${valor_frase.indexOf('a')} <br>`;
+        div_analises.innerHTML += `Onde está a 1ª palavra "amor"? ${valor_frase.indexOf('amor')} <br>`;
+
+        div_analises.innerHTML += `Troque o 1ª "a" por "@"? ${valor_frase.replace('a','@')} <br>`;
+        div_analises.innerHTML += `Troque o 1ª "i" por "1"? ${valor_frase.replace('i','1')} <br>`;
+
+        div_analises.innerHTML += `<br>
+        NUNCA, NENHUMA função altera o texto original!! <br>
+        Receba: ${valor_frase} <=== Original!!! <br>`;
+    }
+</script>

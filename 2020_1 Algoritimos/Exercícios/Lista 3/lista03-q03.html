@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - Exercício 03</title>
+</head>
+<body>
+    
+    Cidade de Origem: <input  id="cidade"> <br>
+    Ano de Nacsimento: <input  id="nascimento"> <br>
+   
+    <button onclick="Cadastrar()">
+        Cadastro
+    </button>
+
+    <div id="div_cadastro" style="display: none;">
+        Você nasceu na cidade 
+        <b id="b_cidade"></b> em <u id="u_nascimento"></u>
+    </div>
+</body>
+</html>
+<script>
+    function Cadastrar() {
+        div_cadastro.style.display = 'block';
+        b_cidade.innerHTML = cidade.value;
+        u_nascimento.innerHTML = nascimento.value;
+
+        
+    }
+
+</script>

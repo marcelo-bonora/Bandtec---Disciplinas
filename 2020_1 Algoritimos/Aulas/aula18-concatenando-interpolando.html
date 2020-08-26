@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 18 - Concatenando e Interpolando</title>
+</head>
+<body>
+    Seu nome: <input id="nome">  
+    <br>
+    Seu bairro: <input id="bairro">
+    <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+        // aqui usamos a INTERPOLAÇÃO!
+        // iniciamos e finalizamos o texto com CRASE!
+        // Usamos ${} para colocar EXPRESSÕES (ex: valor de um campo)
+        alert(`Seu nome será: ${nome.value}! Uau!`);
+
+        // aqui usamos a CONCATENAÇÃO
+        // podemos usar aspas simples ou duplas
+        // "colamos" o texto com as expressões usando "+"
+        alert("Vai morar em: "+bairro.value+"! Bom bairro!");
+    }
+</script>

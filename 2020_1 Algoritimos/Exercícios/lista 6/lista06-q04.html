@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista06-q04</title>
+</head>
+<body>
+    <h1>Controle de Peso Médio no Elevador</h1>
+    
+    <input id="homens" placeholder="Nº de Homens" autofocus>
+    <input id="mulheres" placeholder="Nº de Mulheres">
+
+    <button onclick="Analisar()"> Analisar Peso </button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function Analisar() {
+        var peso = (Number(homens.value) * 80) + (Number(mulheres.value) * 60);
+
+        div_mensagem.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${peso.toFixed(2)}`;
+
+        if (peso > 800) {
+            div_mensagem.innerHTML +=`<br> <span style="color: blue"> Será necessário descer alguém para que o elevador se movimente</span>`; 
+        }
+        else{
+            div_mensagem.innerHTML = `Elevador pode partir`;
+        }
+    }
+</script>

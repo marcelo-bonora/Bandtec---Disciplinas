@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista14-q03</title>
+</head>
+<body>
+    <h1>"Conte de 1 a 150 </h1>
+    <button onclick="diga()">"Conte de 1 a 150 </button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function diga(){
+
+        for(var contador=1; contador <151; contador++) {
+            div_msg.innerHTML  += `${contador}<br>`;
+        }
+    }
+</script>

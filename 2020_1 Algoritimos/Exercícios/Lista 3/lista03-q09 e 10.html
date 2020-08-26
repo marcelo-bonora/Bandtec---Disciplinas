@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista03-q09/10</title>
+</head>
+<body>
+    <h1> Calculo de Auxílio Filhos </h1>
+    Quantindade de filhos:<input id="filhos" placeholder="0" autofocus> <br> <br>
+    Quantindade de filhos menores de 10 anos:<input id="menos10" placeholder="0"> <br>  <br>
+    Quantindade de filhos apartir de 10 anos:<input id="mais10" placeholder="0"> <br>   <br>
+
+    <button onclick="calcular()"> Calcular Auxílio Filhos </button>
+
+    <div id="div_mensagem" style="display: none">
+        Você tem <b id="b_filhos"></b> filho(s), <b id="b_menos10"></b> filho(s) menor(es) de 10 anos e <b id="b_mais10"></b> filho(s) apartir de 10 anos, logo, seu "Auxílio Filhos" será de <b>R$</b><b id="b_total"></b>
+    </div>
+    
+</body>
+</html>
+<script>
+    function calcular() {
+        b_filhos.innerHTML = filhos.value;
+        b_menos10.innerHTML = menos10.value;
+        b_mais10.innerHTML = mais10.value;
+
+        var auxilio = (Number(menos10.value) * 30) + (Number(mais10.value)* 20);
+
+        b_total.innerHTML = auxilio.toFixed(2);
+
+        div_mensagem.style.display = 'block';   
+    }
+
+</script>

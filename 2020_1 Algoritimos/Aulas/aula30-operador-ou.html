@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 30</title>
+</head>
+<body>
+    
+    <input placeholder="Nota ENEM" id="enem"> <br>
+    <input placeholder="Nota Vestibular" id="vestibular"> <br>
+
+    <button onclick="avaliar()">
+        E agora?
+    </button>
+
+</body>
+</html>
+<script>
+function avaliar() {
+    var nota_enem = Number(enem.value);
+    var nota_vestibular = Number(vestibular.value);
+
+    // basta que UM DOS DOIS seja 450 ou mais, então...
+    // Operador "OU" (||)
+    // Ele indica que basta que UM dos testes seja verdade p/ todo o teste ser verdade
+    if (nota_enem >=450 || nota_vestibular >= 450) {
+        alert('Você participará da dinâmica de grupos');
+    } else {
+        alert('Tente outra vez');
+    }
+}
+</script>

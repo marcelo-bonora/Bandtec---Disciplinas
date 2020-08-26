@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista04-q09</title>
+</head>
+<body>
+    <h1>SkolVírus</h1>
+
+    Total de pessoas atualmente infectadas:
+    <input id="infectados"><br><br>
+
+    <button onclick="ontem()">Quantas pessoas infectadas ontem</button>
+        <div id="mensagem1"></div>
+<br>
+    <button onclick="amanhã()">Quantas pessoas infectadas amanhã</button>
+        <div id="mensagem2"></div>
+ <br>
+    <button onclick="mes1()">Quantas pessoas infectadas daqui a 1 mês</button><br><br>
+        <div id="mensagem3"></div>
+
+</body>
+</html>
+<script>
+    function ontem() {
+        var pessoas = Number(infectados.value);
+        pessoas -=35;
+        mensagem1.innerHTML = `  Ontem haviam ${pessoas} pessoas infectadas ontem`;
+ }
+    function amanhã() {
+        var pessoas = Number(infectados.value);
+        pessoas +=35;
+     mensagem2.innerHTML = `Amanhã haverão ${pessoas} pessoas infectadas`;
+}
+    function mes1() {
+        var resultado = Number(infectados.value) + (35*30);
+        mensagem3.innerHTML = `Daqui a 1 mês haverão ${resultado} pessoas infectadas.`;
+    }
+</script>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista20-q05</title>
+</head>
+
+<body>
+
+    <h1>Campo Minado</h1>
+    <hr>
+    <button onclick="novo_jogo()">Novo jogo</button>
+    <br>
+    <br>
+    Minas: <b id="b_mina">?</b>
+    <br>
+    Explosões: <b id="b_explosoes">0</b>
+    <br>
+    Pontos: <b id="b_pontos">0</b>
+    <br>
+    <br>
+    <div id="div_jogo">
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+    var mina = 0;
+    var v_pontos = 0;
+    var v_explosoes = 0;
+
+    function novo_jogo() {
+        v_pontos = 0;
+        v_explosoes = 0;
+        mina = 0;
+        div_jogo.innerHTML = ``;
+        b_pontos.innerHTML = v_pontos;
+        b_explosoes.innerHTML = v_explosoes;
+
+        for (c = 0; c < 12; c++) {
+            var n = parseInt(Math.random() * 2);
+
+            if (c % 4 == 0) {
+                div_jogo.innerHTML += `<br><br><br><br><br>`;
+                if (c == 0) {
+                    div_jogo.innerHTML = ``;
+                }
+            }
+
+            if (n == 0) {
+                div_jogo.innerHTML += `<img src="pergunta.png" style="height: 100px; width: 100px; float: left;" onclick="this.src='mina.png'; explosoes()">`;
+                mina++;
+
+            } else {
+                div_jogo.innerHTML += `<img src="pergunta.png" style="height: 100px; width: 100px; float: left;" onclick="this.src='medalha.png'; pontos()">`;
+            }
+        }
+
+        b_mina.innerHTML = mina;
+    }
+
+    function pontos() {
+        v_pontos += 100;
+        b_pontos.innerHTML = v_pontos;
+    }
+
+    function explosoes() {
+        v_explosoes++;
+        b_explosoes.innerHTML = v_explosoes;
+    }
+
+</script>

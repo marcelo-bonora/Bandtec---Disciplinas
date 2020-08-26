@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista03-q08</title>
+</head>
+<body>
+    <h1>Desconto de Salário de um Trabalhador</h1>
+    Valor do seu salário:<input id="valor" placeholder="R$" autofocus>
+
+    <button onclick="calcular()">Calcular Descontos</button>
+
+    <div id="div_descontos">
+        Seus descontos serão de:
+        <br>INSS:<b>R$</b><b id="b_inss"></b>
+        <br>IR:<b>R$</b><b id="b_ir"></b>
+        <br>Total de descontos:<b>R$</b><b id="b_total"></b>
+        <br>Seu salário, após os descontos será de:
+        <b><u>R$</u></b><b><u id="u_desconto"></u></b>
+    </div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var salario = Number(valor.value);
+        var inss = salario * 0.1;
+        b_inss.innerHTML = inss.toFixed(2);
+
+        var ir = salario * 0.2;
+        b_ir.innerHTML = ir.toFixed(2);
+
+        var total = inss + ir;
+        b_total.innerHTML = total.toFixed(2);
+
+        var desconto = salario - total;
+        u_desconto.innerHTML = desconto.toFixed(2);
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista18-q01</title>
+</head>
+<body>
+
+    <h1>Calcular pontos</h1>
+    <input type="text" id="vit" placeholder="Nº vit" autofocus>
+    <input type="text" id="der" placeholder="Nº der">
+    <input type="text" id="emp" placeholder="Nº emp">
+    <button onclick="ver()">Analisar campanha</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function ver(){
+        div_msg.innerHTML = ``;
+
+        let time = {
+            vitorias: Number(vit.value),
+            derrotas: Number(der.value),
+            empates: Number(emp.value)
+        };
+        div_msg.innerHTML = `O time terminou o campeonato com ${time.vitorias * 3 + time.empates} pontos`;
+    }
+</script>

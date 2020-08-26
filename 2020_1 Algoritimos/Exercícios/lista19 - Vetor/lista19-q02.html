@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista19-q02</title>
+</head>
+<body>
+    <input id="local" placeholder="Viagens" autofocus>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br>
+    <input id="qual" placeholder="Qual viagem">
+    <button onclick="pesquisar()">Relembrar viagem</button>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+
+    let viagem = [];
+    function cadastrar(){
+        viagem.push(local.value);
+    }
+
+    function pesquisar(){
+        let numero = Number(qual.value);
+
+        if(numero >= 1 && numero <= viagem.length){
+            let encontrado = viagem[numero - 1];
+            div_msg.innerHTML = `Sua ${numero}ª viagem foi ${encontrado} `;
+        } else{
+            div_msg.innerHTML = `Você ainda não fez sua ${numero}ª`;
+        }
+    }   
+</script>

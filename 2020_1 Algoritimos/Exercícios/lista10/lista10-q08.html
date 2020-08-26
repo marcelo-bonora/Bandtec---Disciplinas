@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista10-q08</title>
+</head>
+<body>
+    <h1>    É Divisivel por 7?  </h1>
+
+    <input id="valor_num" placeholder="Insira um valor" autofocus>
+
+    <button onclick="avaliar()">    É divisível por 7?  </button>
+
+</body>
+</html>
+<script>
+    function avaliar(){
+        var num = Number(valor_num.value);
+
+        if(num % 7 == 0){
+            alert("Sim, é");
+        } else {
+            alert("Não, não é");
+        }
+    }
+</script>

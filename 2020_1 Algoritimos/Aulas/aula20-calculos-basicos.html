@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 20 - Cálculos Simples</title>
+</head>
+<body>
+    
+    <h3>Cálculos simples</h3>
+
+    Primeiro número: <input id="numero1"> <br>
+    Segundo número: <input id="numero2"> <br>
+    <br>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="somar()">Somar</button>
+    
+    <button onclick="somar_bonitinho()">
+        Somar Bonitinho
+    </button>
+
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+	
+    function subtrair() {
+        div_resultado.innerHTML = numero1.value - numero2.value;
+    }
+
+    function multiplicar() {
+        // o cálculo PODE ser feito dentro da expressão
+        div_resultado.innerHTML = `A multiplicação dá: 
+        ${numero1.value * numero2.value}`;
+    }
+
+    function dividir() {
+        div_resultado.innerHTML = `A divisão entre 
+        ${numero1.value} e ${numero2.value} 
+        dá <b>${numero1.value / numero2.value}</b>`;
+    }
+
+    function somar() {
+        // para SOMAR, temos que, OBRIGATORIAMENTE,
+        // converter CADA UM dos campos em número
+        // se não fizermos isso, os valores serão concatenados e não somados
+        div_resultado.innerHTML = Number(numero1.value) + Number(numero2.value);
+    }
+
+    function somar_bonitinho() {
+        // É POSSÍVEL invocar funções (como a Number)
+        // dentro de expressões na interpolação
+        div_resultado.innerHTML = `A soma dá: 
+        <b>${Number(numero1.value) + Number(numero2.value)}</b>`;
+    }
+</script>

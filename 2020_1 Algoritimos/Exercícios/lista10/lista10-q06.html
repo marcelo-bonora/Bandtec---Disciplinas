@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista10-q06</title>
+</head>
+<body>
+    
+    <h1>  Sorteio de Times  </h1>
+    <button onclick="clicar()">     Sortear time    </button>
+    <div>
+        <img id="div_img" style="height: 150px">
+    </div>
+
+</body>
+</html>
+<script>
+
+var numero = 0;
+
+    function clicar(){
+        numero = parseInt(Math.random() * 4) +1;
+
+        if ( numero == 1){
+            div_img.src = `saopaulo.png`;
+
+        }if (numero == 2){
+            div_img.src = `santos.png`;
+
+        } if (numero == 3){
+            div_img.src = `palmeiras.png`;
+
+        } if (numero == 4){
+            div_img.src = `corinthians.png`;
+        }
+    }
+
+</script>

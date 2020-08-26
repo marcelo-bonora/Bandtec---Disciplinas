@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão2</title>
+</head>
+<body>
+    <h1>Campeonato de futebol - Estatística</h1> 
+    
+    Nome do time:               <input id="time"> <br> <br>
+    Total do jogos disputados: <input id="jogos"> <br> <br> 
+    Total de gols marcados: <input id="gols"> <br> <br> 
+    Total de gols sofridos: <input id="sofr"> <br> <br>
+    Vitórias: <input id="vit"> <br> <br>
+    Empates: <input id="emp"> <br> <br>
+    Derrotas: <input id="der"> <br> <br>
+    
+    <button onclick="estatística()"><i>Gerar estatísticas</i></button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function estatística() {
+        var média = Number(gols.value) / Number(jogos.value);
+        var média2 = Number(sofr.value) / Number(jogos.value);
+        var saldo = Number(gols.value) - Number(sofr.value);
+        var vitória = Number(vit.value) * 3;
+        var pontos = Number(vitória) + Number(emp.value);
+        var aproveitamento1 = Number(jogos.value) * 3;
+        var aproveitamento2 = Number(pontos) / Number(aproveitamento1) * 100;
+        
+        div_mensagem.innerHTML =`
+            <br>
+            O time <b>${time.value}</b> disputou ${jogos.value} jogos.
+            <br>
+            <br> Marcou <u>${gols.value}</u> gols e sofreu <u>${sofr.value}</u>. Sua média de gols marcados por partida foi de <b>${média.toFixed(2)}</b> e sua média de gols sofridos por partida foi de <b>${média2.toFixed(2)}</b>. Seu saldo de gols foi de <b><i>${saldo}</i></b>.
+            <br>
+            <br> Como teve <u>${vit.value}</u> vitórias, <u>${emp.value}</u> empates e <u>${der.value}</u> derrotas, conquistou <b>${pontos}</b> pontos, obtendo um aproveitamento de <b>${aproveitamento2.toFixed(2)}</b>%.
+            `
+    }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista09-q07</title>
+</head>
+<body>
+    <h1>Avaliar o Clima do Ambiente</h1>
+    <input id="valor_temp" placeholder="Temp. do Ambiente (°C)" autofocus>
+    <input id="valor_umi" placeholder="Umidade do Ambiente (%)">
+    
+    <button onclick="avaliar()">Avaliar clima</button>
+
+    <div id="div_text"></div>
+</body>
+</html>
+<script>
+    function avaliar() {
+        var temp = Number(valor_temp.value);
+        var umi = Number(valor_umi.value);
+    
+        if (temp >= 22 && temp <= 23 && umi < 60){
+            div_text.innerHTML = `Clima agradável`;
+
+        }else if (umi < 0 || umi > 100){
+            alert("Valor de umidade invaálido")
+            div_text.innerHTML = ``;
+
+        }else {
+            div_text.innerHTML = `Clima desconfortável`;
+        }
+        
+    }
+</script>

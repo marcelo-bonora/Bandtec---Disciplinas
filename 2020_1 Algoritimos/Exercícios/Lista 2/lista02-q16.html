@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista02-q16</title>
+</head>
+<body>
+    <h1>O que faz um triatleta?</h1>
+    <button onclick="Nada()";>Nada</button>
+    <button onclick="Corre()";>Corre</button>
+    <button onclick="Pedala()";>Pedala</button>
+<br>
+    <img id="img" src="https://ptanime.com/wp-content/uploads/2015/04/analise_free-episode-9-pic-3.jpg" 
+    style="height: 200px; display: none; "
+    >
+
+</body>
+</html>
+<script>
+    function Nada(){
+        img.style.display = 'block';
+        img.src = 'https://ptanime.com/wp-content/uploads/2015/04/analise_free-episode-9-pic-3.jpg';
+    }
+
+    function Corre(){
+        img.src = 'https://pa1.narvii.com/6168/06d0ace7dab2dddf748244ea1bc788bc6c177744_hq.gif';
+    }
+
+    function Pedala() {
+        img.src = 'https://66.media.tumblr.com/fb9ef7ea94f99ffbe92967ae55418754/5da943346508d619-90/s500x750/005f9ba05a983e43b344408d997066bea83cd619.gifv';
+    }
+
+</script>

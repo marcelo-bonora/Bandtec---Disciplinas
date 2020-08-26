@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista09-q09</title>
+</head>
+<body>
+    <h1>Desempenho do Aluno</h1>
+    <input id="valor_nota" placeholder="Insira sua nota" autofocus>
+    <input id="valor_frequencia" placeholder="Insira sua frequencia em aulas(%)">
+    <button onclick="avaliar()">Analisar aluno</button>
+    <div>
+        <b id="div_mensagem"></b>
+    </div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var nota = Number(valor_nota.value);
+        var freq = Number(valor_frequencia.value);
+        div_mensagem.innerHTML = ``;
+
+        if (nota > 0 && nota < 6){
+            div_mensagem.innerHTML = `Aluno ficou abaixo da média`;
+
+            }if (nota >= 6 && nota <= 8 ){
+                div_mensagem.innerHTML = `Aluno ficou da média`;
+
+            }else {
+                div_mensagem.innerHTML = `Aluno acima da média`;
+
+            }if (freq >= 75 && freq <= 100){
+                div_mensagem.innerHTML += `<br>Aluno aprovado por frequência`;
+            }else {
+                div_mensagem.innerHTML += `<br>Aluno reprovado por frequência`;
+
+            }if (nota < 0 || nota > 10){
+                div_mensagem.innerHTML = ``;
+                alert("Onde já se viu nota <0 ou >10?!");
+
+            }else if (freq < 0 || freq > 100){
+                div_mensagem.innerHTML = ``;
+                alert("Onde já se viu frequência <0 ou >100?!");
+            }
+        }
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 12 - complementando conteúdo</title>
+</head>
+<body>
+    
+    <h2>O que está acontecendo no jogo?</h2>
+
+    <button onclick="gol()">Gol!</button>
+    <button onclick="trave()">Bola na trave!</button>
+    <button onclick="falta()">Falta!</button>
+
+    <div id="div_acontecimentos">
+        <h3>Agora no jogo...</h3>
+    </div>
+
+</body>
+</html>
+<script>
+
+function gol() {
+    div_acontecimentos.innerHTML += 'Goooolll! <br>';
+}
+
+function trave() {
+    div_acontecimentos.innerHTML += 'Bola na Trave! UUUHHH <br>';
+}
+
+function falta() {
+    div_acontecimentos.innerHTML += 'É falta! <br>';
+}
+</script>

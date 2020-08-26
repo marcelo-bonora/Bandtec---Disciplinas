@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 33</title>
+</head>
+<body>
+
+    <button onclick="aleatorio()">
+        Gerar número aleatório padrão (maior que 0 e menor que 1)
+    </button>
+
+    <button onclick="aleatorio_ate10()">
+        Gerar número aleatório até 10 (maior que 0 e menor que 10)
+    </button>
+
+    <button onclick="aleatorio_ate100()">
+        Gerar número aleatório até 100 (maior que 0 e menor que 100)
+    </button>
+
+    <button onclick="aleatorio_ate9_inteiro()">
+        Gerar número aleatório INTEIRO até 9 (de 0 até 9)
+    </button>
+
+    <button onclick="aleatorio_dadinho()">
+        Gerar os números de um dadinho comum (de 1 até 6)
+    </button>
+
+    <div id="div_numero"></div>
+</body>
+</html>
+<script>
+    function aleatorio() {
+        var numero = Math.random(); // gera entre >0 e <1
+        div_numero.innerHTML = numero;
+    }
+
+    function aleatorio_ate10() {
+        var numero = Math.random() * 10; // gera entre >0 e <10
+        div_numero.innerHTML = numero;
+    }
+
+    function aleatorio_ate100() {
+        var numero = Math.random() * 100; // gera entre >0 e <100
+        div_numero.innerHTML = numero;
+    }    
+
+    function aleatorio_ate9_inteiro() {
+        var numero = parseInt(Math.random() * 10); // gera entre >=0 e <=9
+        // parseInt() pela a parte inteira de um número.
+        // OBS: Ele NÃO ARREDONDA o número. Apenas descarta o valor após a vírgula
+        div_numero.innerHTML = numero;   
+    }
+
+
+    function aleatorio_dadinho() {
+        var numero = parseInt(Math.random() * 6) + 1; 
+        // gera entre >=0 e <=5, daí pegamos a parte inteira e somamos 1
+        // ou seja, 
+        /*  Valor sorteado | parseInt() | +1 (resultado final)
+                0.001      |     0      | 1
+                1.876      |     1      | 2
+                2.246      |     2      | 3
+                3.783      |     3      | 4
+                4.937      |     4      | 5
+                5.999      |     5      | 6                                                                
+        */
+        div_numero.innerHTML = numero;   
+    }
+</script>

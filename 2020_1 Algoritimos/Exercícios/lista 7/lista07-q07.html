@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><lista07-q07></lista07-q07></title>
+</head>
+<body>
+    <h1>Estações do Ano</h1>
+    <select id="est" onchange="muda()">
+        <option>-- Escolha um mes --</option>
+        <option value="inv">Janeiro</option>
+        <option value="inv">Fevereiro</option>
+        <option value="pri">Março</option>
+        <option value="pri">Abril</option>
+        <option value="pri">Maio</option>
+        <option value="ver">junho</option>
+        <option value="ver">Julho</option>
+        <option value="ver">Agosto</option>
+        <option value="out">Setembro</option>
+        <option value="out">Outubro</option>
+        <option value="out">Novembro</option>
+        <option value="inv">Dezembro</option>
+    </select>
+
+    <div>
+        <img id="div_img" style="height: 300px">
+    </div>
+
+</body>
+</html>
+<script>
+    function muda(){
+          
+
+        if(est.value == 'pri'){
+            div_img.src = `primavera.png`;
+        }else if(est.value == 'ver'){
+            div_img.src = `verão.png`;
+        }else if(est.value == 'out'){
+            div_img.src = `outono.png`;
+        }else  if(est.value == 'inv'){
+            div_img.src = `inverno.png`;
+        }else{
+            div_img.src = ``;
+        }
+    }
+</script>

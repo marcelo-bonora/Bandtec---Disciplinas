@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista14-q09</title>
+</head>
+<body>
+    <h1>Xícaras de café com leite</h1>
+    <input placeholder="Quantas xícaras de café c/ leite?" autofocus id="qtd">
+    <button onclick="ver()">Ver a quantidade</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function ver(){
+
+        div_msg.innerHTML = ``;
+
+        var n = Number(qtd.value);
+
+        for(contador=0; contador < n; contador++){
+            div_msg.innerHTML += `<img src="leite.png" style="height: 150px; width: 100px; float: left;">`;
+            div_msg.innerHTML += `<img src="cafe.png" style="height: 150px; width: 100px; float: left;">`;
+            div_msg.innerHTML += `<img src="cafe.png" style="height: 150px; width: 100px; float: left;">`;
+        }
+    }
+</script>

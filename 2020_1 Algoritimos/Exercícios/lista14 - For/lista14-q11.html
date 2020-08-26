@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista14-q11</title>
+</head>
+<body>
+    <h1>Depositos realizados</h1>
+    <input placeholder="Quantide de depositos" autofocus id="qtd_deps">
+    <input placeholder="Valor de cada deposito" id="valor_qtd">
+    <button onclick="ver()"`>Acompanhar grana</button>
+    <div id="div_msg"></div>
+    <div id="div_msg2" style="display: none">
+        Total guardado: R$<span id="span_msg"></span>
+    </div>
+     
+
+</body>
+</html>
+<script>
+
+    var v = 0;
+    
+    function ver(){
+        
+        div_msg.innerHTML = ``;
+
+        var qtd = Number(qtd_deps.value);
+        var valor = Number(valor_qtd.value);
+        
+
+        for(contador =1 ; contador < qtd+1; contador++){
+            var valor_dois = valor + v;
+            v == valor_dois;
+            if(contador%3 == 0){
+                valor_dois = v + valor;
+                valor_tres = valor_dois + (valor_dois * 0.01);
+                v = valor_tres;
+                
+                div_msg.innerHTML += `${contador}º Mês: R$${v.toFixed(2)}<br>`;
+            } else{
+                valor_dois = valor + v;
+                v = valor_dois;
+                div_msg.innerHTML += `${contador}º Mês: R$${v.toFixed(2)}<br>`;
+            }  
+        }
+
+        var total = v;
+        div_msg2.style.display = `block`;
+        span_msg.innerHTML = total.toFixed(2);
+
+        if(contador == qtd+1){
+            v = 0;
+        }
+    }
+</script>

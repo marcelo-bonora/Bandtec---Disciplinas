@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista02-q16</title>
+</head>
+<body>
+    <h1>A história de uma pizza</h1>
+
+    <button onclick="Acabou_de_chegar()";>Acabou de chegar</button>
+    <button onclick="Depois_de_1_minuto()";>Depois de 1 minuto</button>
+    <button onclick="Depois_de_5_minutos()";>Depois de 5 minutos</button>
+    <button onclick="Depois_de_15_minutos()";>Depois de 15 minutos</button>
+<br>
+    <img id="pizza" src="https://static.vecteezy.com/system/resources/previews/000/265/980/non_2x/pepperoni-pizza-vector.jpg"
+    style="height: 200px; display: none;">
+    
+    
+</body>
+</html>
+<script>
+    function Acabou_de_chegar() {
+        pizza.src = 'https://static.vecteezy.com/system/resources/previews/000/265/980/non_2x/pepperoni-pizza-vector.jpg';
+        pizza.style.display ='block';
+    }
+
+    function Depois_de_1_minuto() {
+        pizza.src = 'https://i.pinimg.com/originals/d1/49/94/d149940ba70c191927875f0c68825c42.png';
+    }
+
+    function Depois_de_5_minutos () {
+        pizza.src = 'https://itadakimasuanime.files.wordpress.com/2015/03/pizza-koufuku-graffiti-10-05.png';
+    }
+
+    function Depois_de_15_minutos () {
+        pizza.src = 'https://st.depositphotos.com/1288156/1945/i/450/depositphotos_19451525-stock-photo-pizza-slice.jpg';
+    }
+
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2020.05.29 - Prova</title>
+</head>
+<body>
+    <h1>Teste "Pense Rápido"</h1>
+
+    <input id="msg" autofocus onkeyup="tempo()">
+    <button onclick="ver()">Iniciar teste</button>
+    <div id="div_msg"></div>
+    <br>
+    <div id="msg_tempo" style="display: none"></div>
+</body>
+</html>
+<script>
+    var agora = 0;
+    var inicio = 0;
+    function tempo(){
+    inicio = new Date().getTime();
+    }
+
+    function ver(){
+        div_msg.innerHTML = ``;
+        msg_tempo.innerHTML = ``;
+        var v_msg = msg.value;
+        agora = new Date().getTime();
+        v_msg = v_msg.trim();
+
+        var result = (Math.abs(inicio - agora) / 1000);
+
+        for(c= v_msg.length-1; c >= 0; c--){
+
+            if(v_msg.length < 5){
+                div_msg.innerHTML = `<b> Valor inválido. Digite ao menos 5 letras sem espaços em branco nas extremidades</b>`;
+                msg_tempo.style.display = "none";
+
+            } else{
+                div_msg.innerHTML += `${v_msg[v_msg.length = c]} <br>`;
+                msg_tempo.style.display = "block";
+                
+            }
+        }
+        msg_tempo.innerHTML = `<b>Você levou ${result.toFixed(3)} segundos para sair da frase e clicar no botão</b>`;
+
+        msg.value = ``;
+
+    }
+
+</script>

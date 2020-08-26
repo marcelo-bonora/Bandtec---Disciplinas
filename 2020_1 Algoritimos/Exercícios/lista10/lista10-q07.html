@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista10-q07</title>
+</head>
+<body>
+    <h1>    Jogando Dado    </h1>
+
+    <button onclick="avaliar()">    Jogar Dado  </button>
+
+    <div>
+        <img id="div_img" style="height: 300px">
+    </div>
+
+</body>
+</html>
+<script>
+    function avaliar(){
+        var numero = parseInt(Math.random() * 6) + 1;
+
+            if (numero == 1){
+                div_img.src = `1.png`;
+
+            }  if (numero == 2){
+                div_img.src = `2.png`;
+
+            }  if (numero == 3){
+                div_img.src = `3.png`;
+
+            }  if (numero == 4){
+                div_img.src = `4.png`;
+
+            }  if (numero == 5){
+                div_img.src = `5.png`;
+
+            }  if (numero == 6){
+                div_img.src = `6.png`;
+            }
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 12 - Incrementando (aumentando) conteúdos</title>
+</head>
+<body>
+    <h3>Incrementando (aumentando) conteúdo já existente</h3>
+
+    <button onclick="cenoura()">Cenoura</button>
+    <button onclick="batata()">Batata</button>
+    <button onclick="temperos()">Temperos</button>
+
+    <div id="div_lista_compras">
+        <b>Lista de compras:</b> 
+    </div>
+</body>
+</html>
+
+<script>
+    function cenoura() {
+        // o operador "+=" INCREMENTA (ou seja, aumenta) um conteúdo que já existe na tag
+        div_lista_compras.innerHTML += '<br>* Cenouras';
+    }
+
+    function batata() {
+        div_lista_compras.innerHTML += '<br>* Batatas';
+    }
+
+    function temperos() {
+        div_lista_compras.innerHTML += '<br>* Temperos';
+    }    
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista06-q07</title>
+</head>
+<body>
+    <h1>Frequencia do Aluno </h1>
+
+    <input id="freq" placeholder="sua frequencia" autofocus>
+
+    <button onclick="analisar()">Analisar frequencia</button>
+    <div>
+        <img style="height: 200px" id="div_img">
+    </div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var frequencia = Number(freq.value);
+
+        if (frequencia < 50){
+            div_img.src = `turista.png`; 
+        }
+        else {
+            div_img.src = `aluno.png`;
+        }
+        
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><lista05-q07></lista05-q07></title>
+</head>
+<body>
+    <h1>Financiamento de uma Casa própria</h1>
+
+    <input id="renda_familiar" placeholder="Renda Familiar" autofocus>
+    <input id="valor_prestação" placeholder="Valor da Prstação">
+
+    <button onclick="verificar_financiamento()">Verificar Financiamento</button>
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+<script>
+    function verificar_financiamento() {
+        var renda = Number(renda_familiar.value) ;
+        var prestação = Number(valor_prestação.value);
+
+        var resultado = ( prestação / renda ) * 100;
+
+        div_mensagem.innerHTML = `A prestação corresponde a ${resultado.toFixed(2)}% da renda familiar`;
+
+        if (resultado > 30) {
+            div_mensagem.innerHTML += `<br> Será necessário complementar a renda familiar`;
+        }
+    
+    }
+</script>

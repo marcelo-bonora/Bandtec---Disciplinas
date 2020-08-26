@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista09-q10</title>
+</head>
+<body>
+    <h1>AValição de um Atendente </h1>
+    <input id="valor_nota" placeholder="Insira sua nota" autofocus>
+    <button onclick="avaliar()">Avaliar</button>
+    <div>
+
+        <img id="div_img1" style="height: 50px;float: left">
+        <img id="div_img2" style="height: 50px;float: left">
+        <img id="div_img3" style="height: 50px;float: left">
+        <img id="div_img4" style="height: 50px;float: left">
+        <img id="div_img5" style="height: 50px;float: left">
+    
+    </div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var nota = Number(valor_nota.value);
+
+        if (nota < 0.5){
+            div_img1.src = `cinza.png`;
+            div_img2.src = `cinza.png`;
+            div_img3.src = `cinza.png`;
+            div_img4.src = `cinza.png`;
+            div_img5.src = `cinza.png`;
+
+        }else if (nota >= 0.5 && nota < 1){
+            div_img1.src = `meia.png`;
+            div_img2.src = `cinza.png`;
+            div_img3.src = `cinza.png`;
+            div_img4.src = `cinza.png`;
+            div_img5.src = `cinza.png`;
+
+        }else if (nota >= 1 && nota < 1.5){
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `cinza.png`;
+            div_img3.src = `cinza.png`;
+            div_img4.src = `cinza.png`;
+            div_img5.src = `cinza.png`;
+
+        }else if (nota >= 1.5 && nota < 2){
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `meia.png`;
+            div_img3.src = `cinza.png`;
+            div_img4.src = `cinza.png`;
+            div_img5.src = `cinza.png`;
+
+        }else if (nota >= 2 && nota < 2.5){
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `amarelo.png`;
+            div_img3.src = `cinza.png`;
+            div_img4.src = `cinza.png`;
+            div_img5.src = `cinza.png`;
+        
+        }else if (nota >= 2.5 && nota < 3){
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `amarelo.png`;
+            div_img3.src = `meia.png`;
+            div_img4.src = `cinza.png`;
+            div_img5.src = `cinza.png`;
+        
+        }else if (nota >= 3 && nota < 3.5){
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `amarelo.png`;
+            div_img3.src = `amarelo.png`;
+            div_img4.src = `cinza.png`;
+            div_img5.src = `cinza.png`;
+        
+        }else if (nota >= 3.5 && nota < 4){
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `amarelo.png`;
+            div_img3.src = `amarelo.png`;
+            div_img4.src = `meia.png`;
+            div_img5.src = `cinza.png`;
+        
+        }else if (nota >= 4 && nota < 4.5){
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `amarelo.png`;
+            div_img3.src = `amarelo.png`;
+            div_img4.src = `amarelo.png`;
+            div_img5.src = `cinza.png`;
+        
+        }else if (nota >= 4.5 && nota < 5){
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `amarelo.png`;
+            div_img3.src = `amarelo.png`;
+            div_img4.src = `amarelo.png`;
+            div_img5.src = `meia.png`;
+        
+        } else{
+            div_img1.src = `amarelo.png`;
+            div_img2.src = `amarelo.png`;
+            div_img3.src = `amarelo.png`;
+            div_img4.src = `amarelo.png`;
+            div_img5.src = `amarelo.png`;
+
+        } if(nota < 0 || nota > 5){
+            alert("Nota inválida. Digite de 0 a 5");
+            div_img1.src = ``;
+            div_img2.src = ``;
+            div_img3.src = ``;
+            div_img4.src = ``;
+            div_img5.src = ``;
+            
+        }
+            
+    }
+</script>

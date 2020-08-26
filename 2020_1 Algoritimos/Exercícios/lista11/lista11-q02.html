@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista11-q02</title>
+</head>
+<body>
+    <h1>Banco Itado</h1>
+    <input id="saldo" placeholder="insira o valor do saldo" autofocus>
+    <input id="debito" placeholder="inisira o valor do debito">
+
+    <button onclick="avaliar()">Avaliar conta</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function avaliar() {
+        var valor_saldo = Number(saldo.value) -  Number(debito.value);
+        
+        div_mensagem.innerHTML = valor_saldo < 0 ? `<b style="color: red"> O saldo atual da conta corrente é R$${valor_saldo}</b>` 
+        : 
+        `<i style="color: blue"> O saldo atual da conta corrente é R$${valor_saldo}</i>`;
+    }
+</script>

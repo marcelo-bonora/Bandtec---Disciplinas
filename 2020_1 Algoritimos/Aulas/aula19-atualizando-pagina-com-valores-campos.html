@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 19 - Atualizando a página com valores de campos</title>
+</head>
+<body>
+
+    <h3>Aula 19 - Atualizando a página com valores de campos</h3>
+    
+    Cidade Natal <input id="cidade"> <br>
+    Ano de nascimento <input id="ano_nascimento"> <br>
+    <br>
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <div id="div_mensagem">
+    </div>
+
+</body>
+</html>
+<script>
+
+function cadastrar() {
+    div_mensagem.innerHTML = `Você nasceu na cidade de <b>${cidade.value}</b> em <u>${ano_nascimento.value}</u>`;
+}
+
+</script>

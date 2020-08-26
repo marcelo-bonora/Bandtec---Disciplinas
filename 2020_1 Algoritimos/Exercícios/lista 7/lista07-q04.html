@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista07-q04</title>
+</head>
+<body>
+    <h1>Times da Grande São Paulo</h1>
+    <select id="times">
+        <option value="Corinthians">Corinthians</option>
+        <option value="Palmeiras">Palmeiras</option>
+        <option value="Santos">Santos</option>
+        <option value="São_Paulo">São Paulo</option>
+    </select>
+
+    <button onclick="fale()">Fale sobre esse time</button>
+    <span style="background-color: black; color: white"></span>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function fale() {
+
+        if (times.value == 'Corinthians' ){
+            div_mensagem.innerHTML = `<span style="background-color: black; color: white">Salve o Corinthians</span>`;
+        } else if (times.value == 'Palmeiras'){
+            div_mensagem.innerHTML = `<span style="background-color: green; color: white">Salve o alviverde imponente</span>`;
+        }else if (times.value == 'Santos'){
+            div_mensagem.innerHTML = `<span style="background-color: white; color: black">Agora que dá a bola é o Santos</span>`;
+        }else{
+            div_mensagem.innerHTML = `<span style="background-color: black; color: red">Salve o Tricolor paulista</span>`;
+        }
+    }
+</script>

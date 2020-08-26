@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista04-q07</title>
+</head>
+<body>
+    <h1>Calculo de Progressão Geométrica(PG)</h1>
+
+    Digite o primeiro n° da PG:<input id="primeiro" placeholder="Insira o valor do primeiro n°"><br><br>
+    Digite o valor da razão da PG:<input id="razão" placeholder="Insira o valor da razão"><br><br>
+    Digite o termo que deseja na PG:<input id="termo" placeholder="Insira número do termo"><br><br>
+
+    <button onclick="PG()">Calcular PG</button>
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+    function PG() {
+        var resultado = Number(primeiro.value) * Number(razão.value) ** (Number(termo.value - 1));
+        mensagem.innerHTML = `O ${termo.value}° termo nessa PG será ${resultado}.`;
+    }
+</script>

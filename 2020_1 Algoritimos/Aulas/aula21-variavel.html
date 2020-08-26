@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 21</title>
+</head>
+<body>
+    
+    Nota 1: <input id="nota1"> <br>
+    Nota 2: <input id="nota2"> <br>
+    <br>
+    
+    <button onclick="calcular()">Calcular Média</button>
+    
+    <div id="div_media"></div>
+
+</body>
+</html>
+<script>
+function calcular() {
+	// aqui criamos a variável 'media'
+    var media = (Number(nota1.value) + Number(nota2.value))/2; 
+    
+    // aqui usamos a variável 'media'
+    div_media.innerHTML = `Sua média foi de ${media}`;
+    
+    // poderíamos ter usado a 'media' quantas vezes fosse necessário
+    
+    // poderíamos ter criados outras variáveis
+}
+</script>

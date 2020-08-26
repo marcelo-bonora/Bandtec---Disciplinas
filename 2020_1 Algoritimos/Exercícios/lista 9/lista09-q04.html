@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista09-q04</title>
+</head>
+<body>
+    <h1>Critérios pra Escolha de Empresa</h1>
+    <input id="nome_empresa" placeholder="Nome da empresa" autofocus>
+    <input id="valor_bolsa" placeholder="Valor da bolsa">
+    <input id="valor_vr" placeholder="Valor do VR">
+    <input id="valor_deslocamento" placeholder="Temp. de deslocamento">
+
+    <button onclick="avaliar()">É preferida?</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function avaliar(){
+        var empresa = nome_empresa.value;
+        var bolsa = Number(valor_bolsa.value);
+        var vr = Number(valor_vr.value);
+        var deslocamento = Number(valor_deslocamento.value);
+        div_mensagem.innerHTML = ``;
+
+        if (bolsa >= 1800 || vr >= 1800 || deslocamento >= 20 && deslocamento <= 30){
+            div_mensagem.innerHTML = ` A empresa ${empresa} é uma de suas preferências`;
+        }else {
+            div_mensagem.innerHTML = `A empresa ${empresa} está fora da sua lista`;
+        }
+    }
+</script>

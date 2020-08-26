@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>litsa08-q02</title>
+</head>
+<body>
+    <h1>Temperatura do Ambiente está Confortavel?</h1>
+    <input id="temp" placeholder="Insira a temperatura do ambiente" autofocus>
+    <button onclick="medir()">Medir conforto</button>
+</body>
+</html>
+<script>
+    function medir(){
+        var valor_temp = Number(temp.value);
+
+        if (valor_temp >= 22 && valor_temp <= 23){
+                alert("Temperatura confortável");
+            }else{
+                alert("Temperatura NÃO está confortável");
+            }
+        }
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista02-q21/22</title>
+</head>
+<body>
+ 
+    <h1>Semáforo </h1>
+    <img id="idVermelho" onclick="vermelho()" style="height: 150px; background-color: black;" src="vermelho.png">
+<br>
+    <img id="idAmarelo" onclick="amarelo()" style="height: 150px; background-color: black;" src="amarelo2.png">
+<br>
+    <img id="idVerde" onclick="verde()" style="height: 150px; background-color: black;" src="verde.png"> 
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+
+function vermelho() {
+    mensagem.innerHTML = `Pare! Aguarde o verde!`;
+    mensagem.style.color = 'white';
+    mensagem.style.backgroundColor = 'red';
+    idVermelho.src = 'vermelho2.png';
+}
+
+function amarelo() {
+    mensagem.innerHTML = `Só siga se estiver perto e rápido.`;
+    mensagem.style.color = 'black';
+    mensagem.style.backgroundColor = 'orange';
+    idAmarelo.src = 'amarelo.png';
+}
+
+function verde() {
+    mensagem.innerHTML = `Siga :)`;
+    mensagem.style.color = 'white';
+    mensagem.style.backgroundColor = 'green';
+    idVerde.src = 'verde2.png';
+}
+</script>

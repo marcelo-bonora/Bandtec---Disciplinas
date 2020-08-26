@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 22 - combo box</title>
+</head>
+<body>
+    
+    <h3>Sons dos bichos</h3>
+
+    <!-- tag <select> Componente "combo box" ou "lista suspensa" -->
+    <select id="bicho">
+        <!-- tag <option> contém cada opção dentro da <select> -->
+        <!-- o attibuto value é o valor de verdade -->
+        <!-- o corpo da tag é o que aparece na tela -->
+        <option value="escolha um bicho">- Escolha -</option>
+        <option value="miau!">Gatos</option>
+        <option value="au au au!">Cachorros</option>
+        <option value="muuuuuu!">Vacas</option>
+    </select>
+
+    <button onclick="som()">
+        Qual é o som?
+    </button>
+
+</body>
+</html>
+<script>
+    function som() {
+        // o "value" da select é o "value" da option que estiver selecionada
+        alert(bicho.value);
+    }
+</script>

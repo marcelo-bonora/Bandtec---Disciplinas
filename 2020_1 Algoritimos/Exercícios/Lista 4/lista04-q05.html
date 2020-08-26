@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista04-q05</title>
+</head>
+<body>
+    <h1>Calculo de Potência</h1>
+    
+    Digite o primeiro valor:<input id="valor1" placeholder="Insira o primeiro valor aqui"> <br><br>
+    Digite o segundo valor:<input id="valor2" placeholder="Insira o segundo valor aqui"> <br><br>
+
+    <button onclick="potencia()">Fazer potência</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+<script>
+    function potencia() {
+        var resultado = Number(valor1.value) ** Number(valor2.value);
+        mensagem.innerHTML = `${valor1.value} elevado a ${valor2.value} da ${resultado}.`
+    }
+
+</script>

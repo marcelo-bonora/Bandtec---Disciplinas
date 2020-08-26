@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt  ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista04-q03</title>
+</head>
+<body>
+    
+    Insira uma valor:<input id="numero" placeholder="valor numérico">
+
+    <button onclick="raiz2()">Exibir sua raiz quadrada</button>
+    <button onclick="raiz3()">Exibir sua raiz cubica</button>
+    <div id="mensagem"></div>
+    <div id="mensagem2"></div>
+
+</body>
+</html>
+<script>
+    function raiz2() {
+        var quadrada = Number(numero.value) ** (1/2);
+        mensagem.innerHTML = `A raiz quadrada de ${numero.value} corresponde a ${quadrada.toFixed(2)}`;
+    }
+    function raiz3() {
+        var cubica = Number(numero.value) ** (1/3);
+        mensagem2.innerHTML = `A raiz cubica de ${numero.value} corresponde a ${cubica.toFixed(2)}`;
+    }
+</script>

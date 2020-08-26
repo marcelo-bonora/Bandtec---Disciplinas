@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 25</title>
+</head>
+<body>
+    Quantos pontos na CNH? <input id="pontos"> <br>
+
+    <button onclick="calcular_multas()">
+    Calcular multas</button>
+</body>
+</html>
+
+<script>
+    function calcular_multas() {
+        var valor_pontos = Number(pontos.value);
+
+
+        // estrutura de decisão
+        // if ("se")
+        // após o if escrevemos um TESTE LÓGICO
+        // um teste lógico só pode ser VERDADE ou MENTIRA (VERDADEIRO ou FALSO)
+        if (valor_pontos >= 20) {
+            // se o teste for VERDADEIRO, este bloco será executado
+            alert('Sua carteira será suspensa!');
+        }
+        // se o teste do if for FALSO, o bloco do if será IGNORADO
+
+        var multa = valor_pontos * 100;
+
+        alert(`Sua multa é de R$${multa.toFixed(2)}`);
+    }
+</script>

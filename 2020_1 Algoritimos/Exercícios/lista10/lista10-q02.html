@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista10-q02</title>
+</head>
+<body>
+    <h1>    Jogo do Dadinho </h1>
+    <button onclick="jog1()">   Jogador 1 jogar dadinho </button>
+    <div id="div_mensagem"></div>
+<br>
+    <button onclick="jog2()">  Jogador 2 jogar dadinho </button>
+    <div id="div_mensagem2"></div>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    
+var jogador1 = 0;
+var jogador2 = 0;
+
+    function jog1(){
+        jogador1 = parseInt(Math. random() * 6) + 1;
+        div_mensagem.innerHTML = jogador1.toFixed(0);
+    }   
+    function jog2(){
+        jogador2 = parseInt(Math. random() * 6) + 1;
+        div_mensagem2.innerHTML = jogador2.toFixed(0);
+
+        if (jogador1 > jogador2){
+            resultado.innerHTML = `Jogador 1 venceu`;
+        }if (jogador2 > jogador1){
+            resultado.innerHTML = `Jogador 2 venceu`;
+        }if (jogador1 == jogador2) {
+            resultado.innerHTML = `Empatou`;
+        }
+    }
+    
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista16-07</title>
+</head>
+<body>
+    <h1>De trá pra frente</h1>
+    <input id="frase" placeholder="Digite algo.." autofocus onkeyup="ver()">
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function ver(){
+        v_frase = frase.value;
+        v_frase = v_frase.trimStart().trimEnd();
+        verificar = v_frase.length-1;
+        div_msg.innerHTML = ``;
+
+        for(c = 0; c <= verificar; c++){
+            div_msg.innerHTML += `${v_frase[v_frase.length = c]}<br>`;
+        }
+    }
+</script>

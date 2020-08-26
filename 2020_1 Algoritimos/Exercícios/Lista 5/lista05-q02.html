@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q02</title>
+</head>
+<body>
+    <h1>Calculo da Média dos Fora de Serie</h1>
+    1ªNota:<input id="nota1" autofocus>
+    2ªNota:<input id="nota2">
+    3ªNota:<input id="nota3">
+
+    <button onclick="calcular_média()">Analisar Desempenho</button>
+
+    <div id="div_mensagem"></div>
+    <div id="div_mensagem2"></div>
+
+</body>
+</html>
+<script>
+    function calcular_média() {
+        var média = (Number(nota1.value) + Number(nota2.value) + Number(nota3.value)) / 3;
+        div_mensagem.innerHTML = `<b>Sua média foi de ${média.toFixed(2)}</b>`;
+
+        if (média > 9.4) {
+            div_mensagem.innerHTML += `<br><b>Parabéns, você é fora de série!</b>`;
+        }
+    }
+</script>

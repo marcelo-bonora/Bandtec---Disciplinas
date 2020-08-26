@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista16-q05</title>
+</head>
+<body>
+    
+    <h1>Nome - Sem Espaços em Brancos - Sem fogo</h1>
+
+    <input placeholder="insira seu nome" autofocus id="nome" onkeyup="analisar()">
+
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+
+    function analisar(){
+        var v_nome = nome.value;
+
+        div_msg.innerHTML = ``;
+
+        v_nome = v_nome.trimEnd();
+        v_nome = v_nome.trimStart();
+
+        var verificar = v_nome.length;
+        if(verificar == 0){
+            div_msg.innerHTML = `Nome deve ser informado`;
+        } else if(v_nome.indexOf('fogo') >= 0){
+            div_msg.innerHTML = `Com fogo não se brinca!!!`;
+        } else if(verificar >= 10){
+            div_msg.innerHTML = `Nome ok`;
+        } else {
+            div_msg.innerHTML = `Nome deve conter pelo menos 10 letras`;
+        }
+    }
+</script>

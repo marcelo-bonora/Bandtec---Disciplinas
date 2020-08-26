@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 3 - Exercício 06</title>
+</head>
+<body>
+    <h3>PIZZARIA</h3>
+
+    Sabor da pizza: <input id="sabor"><p>
+    Preço: <input id="preço"><p>
+    Quantidade de pessoas: <input id="pessoas"><p>
+
+    <button onclick="pedido()">Ver valor por amigo</button>   
+    
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+<script>
+    function pedido() {
+        var pedido = Number(preço.value) / Number(pessoas.value);
+
+        div_resultado.innerHTML = `Cada amigo vai colaborar com <u>R$${pedido}</u> para a pizza de ${sabor.value}`;
+    }
+
+
+</script>

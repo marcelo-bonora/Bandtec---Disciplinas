@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista05-q08</title>
+</head>
+<body>
+    <h1>Banco - Verificação do Cheque Especial</h1>
+
+    <input id="saldo" placeholder="Insira o saldo da conta" autofocus>
+    <input id="debito" placeholder="Insira o valor do debito">
+
+    <button onclick="analisar()">Analisar Conta</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var subitração = Number(saldo.value) - Number(debito.value)
+
+        div_mensagem.innerHTML = `O saldo atual da conta corrente é R$${subitração.toFixed(2)}`;
+
+        if (subitração < 0) {
+            div_mensagem.innerHTML = `<b style="color: red">O saldo atual da conta corrente é R$${subitração.toFixed(2)}</b>`;
+        }
+
+    }
+</script>

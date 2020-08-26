@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista02-q19/20</title>
+</head>
+<body>
+    
+    <h1>Dragon Ball Z - Transformações Sayajins</h1>
+
+    <img src="BASE.png"
+    style="height: 400px;" id="imagem">
+
+    <div id="mensagem">Ki base do Guerreiro do Sayajin: 2000</div>
+<br>
+    <button onclick="SSJ()" id="SSJ">Transformar em SSJ</button>
+    <button onclick="SSJ2()" id="SSJ2">Transformar em SSJ2</button>
+    <button onclick="SSJ3()" id="SSJ3">Transformar em SSJ3</button>
+    <button onclick="BASE()" id="BASE">Voltar para a forma Base</button>
+
+</body>
+</html>
+<script>
+
+function SSJ() {
+    imagem.src = "SSJ.png";
+    mensagem.style.color = 'blue'; 
+    mensagem.style.backgroundColor = '';
+    mensagem.innerHTML = `ki na forma SSJ: 100000`;
+}
+
+function SSJ2() {
+    imagem.src = "SSJ2.png";
+    mensagem.style.color = 'yellow'; 
+    mensagem.style.backgroundColor = 'blue'; 
+    mensagem.innerHTML = `ki na forma SSJ2: 200000`;
+}
+
+function SSJ3() {
+    imagem.src = "SSJ3.png";
+    mensagem.style.color = 'orange'; 
+    mensagem.style.backgroundColor = 'yellow'; 
+    mensagem.innerHTML = `ki na forma SSJ3: 400000`;
+}
+
+function BASE() {
+    imagem.src = "BASE.png";
+    mensagem.style.color = ''; 
+    mensagem.style.backgroundColor = '';
+    mensagem.innerHTML = `Ki base do Guerreiro do Sayajin: 2000`;
+}
+</script>

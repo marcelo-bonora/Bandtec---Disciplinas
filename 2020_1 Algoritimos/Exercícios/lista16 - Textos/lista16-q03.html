@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista16-q03</title>
+</head>
+<body>
+    
+    <h1>Nome - Sem Espaços em Brancos</h1>
+
+    <input placeholder="insira seu nome" autofocus id="nome" onkeyup="analisar()">
+
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+
+    function analisar(){
+
+        div_msg.innerHTML = (nome.value.trimStart().trimEnd().length >= 10) ? "Nome OK" : "Nome deve ter pelo menos 10 letras";
+    }
+
+</script>

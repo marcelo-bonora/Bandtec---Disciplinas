@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista17-q03</title>
+</head>
+<body>
+    
+    <h1>Aposentadoria</h1>
+    <input placeholder="Idade" autofocus id="idade">
+    <button onclick="ver()">Simular aposentadoria</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function ver(){
+        var v_idade = Number(idade.value);
+        var aposentadoriaH = 65 - v_idade;
+        var AnoH = new Date().getFullYear() + aposentadoriaH;
+        var aposentadoriaM = 60 - v_idade;
+        var AnoM = new Date().getFullYear() + aposentadoriaM;
+
+        var Dia = new Date().getDay();
+        var Mes = new Date().getMonth();
+
+        div_msg.innerHTML = `Se for homem, faltam ${aposentadoriaH} anos para se aponsentar. Poderá se aposentar em ${Dia}/${Mes}/${AnoH}.<br> Se for mulher, faltam ${aposentadoriaM} anos para se aposentar. Poderá se aposentar em ${Dia}/${Mes}/${AnoM}. `;
+    }
+
+</script>

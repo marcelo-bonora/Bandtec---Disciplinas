@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lista12-q05</title>
+</head>
+<body>
+    <h1>Numeros Sorteados</h1>
+    <input id="valor_sortear" placeholder="Quantos nº quer sortear?"  autofocus>
+    
+    <button onclick="clicar()">Sortear números</button>
+    <div id="div_msg"></div>
+
+</body>
+</html>
+<script>
+    function clicar(){
+        var sortear = Number(valor_sortear.value);
+        var contador = 1;
+
+        div_msg.innerHTML = ``;
+
+        while (contador < sortear){
+            contador++;
+            var numero = parseInt(Math.random() * 102) - 1;
+                if (numero < 0){
+                    numero == 0;
+                } else if (numero > 100){
+                    numero == 100;
+                }
+            div_msg.innerHTML += `<b>${numero}</b><br>`
+
+        }
+    }
+</script>
