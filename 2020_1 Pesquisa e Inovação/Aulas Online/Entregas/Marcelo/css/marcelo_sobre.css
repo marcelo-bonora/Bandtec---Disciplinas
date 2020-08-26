@@ -1,0 +1,136 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color:	#f4f4f4;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: #232323;
+    color: #ffffff00;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: 	#20B2AA 4px solid;
+}
+
+.header a{
+    color: #ffffff;
+    text-decoration: #20B2AA;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.header li{
+    float: left;
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.header .title-header{
+    float: left;
+}
+
+.header .title-header h1{
+    margin: 0;
+}
+
+.nav{
+    float: right;
+    margin-top: 10px;
+}
+
+.header .highlight, .header .current a{
+    color: #20B2AA;
+    font-weight: bold;
+}
+
+.menu1 {
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url(https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Teemo_14.jpg) ;
+    padding: 5%;
+    width: 90%;
+    box-shadow: 20px;
+    
+}
+
+.menu2 {
+    width: 80%;
+    padding: 10%;
+    margin: 0 auto;
+    background-size: 100%;
+}
+
+.menu3 {
+    background-color:  rgba(0,0,0,0.5);
+    width: 80%;
+    padding: 10%;
+    border-radius: 20px;
+    background-size: 100%;
+    min-width: 80%;
+    min-height: 80%;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px #111111;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+footer{
+    clear: both;
+    background-color:rgb(24, 24,24);
+    color: #20B2AA;
+    text-align: center;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #111111;
+    font-weight: arial bold;
+    background-size: 100%;
+}
+
+p{
+    color:whitesmoke;
+    font-size: 30px;
+    font-family:Helvetica;
+    text-shadow: 1px 1px 1px #111111;
+    background-size: 100%;
+}
+
+
+.pal1{
+    color: #20B2AA;
+    font-weight: arial bold; 
+}
+
+.pal2 {
+    color: #20B2AA;
+    font-weight: arial bold; 
+}
+
+.pal3 {
+    color: #20B2AA;
+    font-weight: arial bold; 
+}
+
+.highlight {
+    color: #20B2AA;
+    font-weight: bold;
+    border-bottom-color: #20B2AA 3px;
+}
