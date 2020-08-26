@@ -1,0 +1,107 @@
+Microsoft Windows [versão 10.0.15063]
+(c) 2017 Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\Aluno>python
+Python 3.6.1 |Anaconda 4.4.0 (64-bit)| (default, May 11 2017, 13:25:24) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> w = 3345.61
+>>> w
+3345.61
+>>> a = floor(w)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'floor' is not defined
+>>> from math import floor
+>>> a = floor(w)
+>>> a
+3345
+>>> b = ceil(w)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ceil' is not defined
+>>> from math import
+  File "<stdin>", line 1
+    from math import
+                   ^
+SyntaxError: invalid syntax
+>>>
+>>> from math import ceil
+>>> b = ceil(w)
+>>> b
+3346
+>>> w1 = 3345.5
+>>> a1 = floor(w1)
+>>> b1 = ceil(w1)
+>>> a1
+3345
+>>> b1
+3346
+>>> w2 = 3345.50
+>>> a2 = floor(w2)
+>>> b2 = ceil(w2)
+>>> a2
+3345
+>>> b2
+3346
+>>> w
+3345.61
+>>> c = round(w,1)
+>>> c
+3345.6
+>>> d = round(w,0)
+>>> d
+3346.0
+>>> e = round(w1,2)
+>>> e
+3345.5
+>>> e1 = round(w,1)
+>>> e1
+3345.6
+>>> e2 = round(w,2)
+>>> e2
+3345.61
+>>> f = round(w)
+>>> f
+3346
+>>>
+>>>
+>>>
+>>>
+>>> x1 = 1.456
+>>> x2 = 3.678
+>>> x3 = 7.5
+>>>
+>>> g = round(x1)
+>>> h = round(x2)
+>>> i = round(x3)
+>>>
+>>> x1
+1.456
+>>> x2
+3.678
+>>> g
+1
+>>> h
+4
+>>> i
+8
+>>> soma = 4
+>>> soma
+4
+>>> del(soma)
+>>> soma
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'soma' is not defined
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>                     ^Z
+  File "<stdin>", line 1
+    
+    ^
+IndentationError: unexpected indent
+>>>
+>>> ^Z
