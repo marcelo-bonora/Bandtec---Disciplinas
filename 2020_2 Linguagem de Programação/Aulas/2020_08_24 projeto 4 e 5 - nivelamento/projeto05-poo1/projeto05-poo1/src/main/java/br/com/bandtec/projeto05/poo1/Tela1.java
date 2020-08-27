@@ -38,6 +38,12 @@ public class Tela1 extends javax.swing.JFrame {
         lbTexto1.setFont(new java.awt.Font("Open Sans", 1, 12)); // NOI18N
         lbTexto1.setText("Digite um número:");
 
+        tfNumero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNumeroActionPerformed(evt);
+            }
+        });
+
         btAcao.setFont(new java.awt.Font("Open Sans", 1, 12)); // NOI18N
         btAcao.setText("Clique me");
         btAcao.addActionListener(new java.awt.event.ActionListener() {
@@ -96,6 +102,10 @@ public class Tela1 extends javax.swing.JFrame {
             taResultado.setText(taResultado.getText() + texto);
         }
     }//GEN-LAST:event_btAcaoActionPerformed
+
+    private void tfNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNumeroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNumeroActionPerformed
 
     /**
      * @param args the command line arguments
