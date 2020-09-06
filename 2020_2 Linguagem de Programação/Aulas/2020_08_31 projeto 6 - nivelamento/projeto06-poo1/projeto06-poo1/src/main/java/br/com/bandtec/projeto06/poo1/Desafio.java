@@ -97,6 +97,7 @@ public class Desafio extends javax.swing.JFrame {
 
         // Calculo padrao IMC
         Double resultado = peso / (altura * altura);
+       
 
         // O operador **(potencia) nao exista no Java, Caso queira
         // pesquise por Math.pow(), exemplo de uso:
@@ -126,7 +127,7 @@ public class Desafio extends javax.swing.JFrame {
         prgStatus.setForeground(Color.BLACK);
 
         // Colocando o valor do "Texto" na barra
-        prgStatus.setString(String.format("resultado do calculo %.2f", resultado));
+        prgStatus.setString(String.format("resultado do calculo  %.2f", resultado ));
 
         // Colocando o valor da barra(convertendo para inteiro)
         prgStatus.setValue(resultado.intValue());
