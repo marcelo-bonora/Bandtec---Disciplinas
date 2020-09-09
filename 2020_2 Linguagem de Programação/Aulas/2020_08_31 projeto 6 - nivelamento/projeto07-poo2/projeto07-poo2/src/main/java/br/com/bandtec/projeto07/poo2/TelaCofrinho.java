@@ -16,6 +16,7 @@ public class TelaCofrinho extends javax.swing.JFrame {
     "cofrinho1" é um OBJETO do tipo "Cofrinho"
     */
     Cofrinho cofrinho1 = new Cofrinho();
+
     
     // o mesmo vale para "cofrinho2" e "cofrinho3"
     Cofrinho cofrinho2 = new Cofrinho();
