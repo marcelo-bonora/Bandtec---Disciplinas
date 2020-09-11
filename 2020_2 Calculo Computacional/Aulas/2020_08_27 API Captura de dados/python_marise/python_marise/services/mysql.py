@@ -22,42 +22,20 @@ class Mysql:
             print(err)
             raise
 
-    def insert_ram(self, data):
+    def insert(self, data):
         query = (
-            "INSERT INTO `RamLeituras`(ramPorcentagem, ramUsadaGb, tempoLeitura, fkMaquina)"
-            "VALUES (%s, %s, %s, %s)"    
-        )    
+            "INSERT INTO `dataset-comp`(cpu, ram, ram_percent, disk)"
+            "VALUES (%s, %s, %s, %s)"
+        )
         values = data
         try:
-            # print('Inserindo Valores')
+            print('Inserindo Valores')
             self.cursor.execute(query,values)
             self.mysql.commit()
         except Exception as err:
             print(err)
             self.mysql.rollback()
             self.close()
-
-
-
-    def insert_cpu(self, data):
-
-        for k in range(len(data[0])):
-
-            query = (
-                "INSERT INTO `CPULeituras`(nomeCPU, CPUPorcentagem, tempoLeitura, fkMaquina)"
-                "VALUES (%s, %s, %s, %s)"    
-            )    
-
-            values = ("CPU_{}".format(k), data[0]["CPU_{}".format(k)], data[1], data[2])
-            try:
-                # for cpu in values:
-                # print('Inserindo Valores')
-                self.cursor.execute(query,values)
-                self.mysql.commit()
-            except Exception as err:
-                print(err)
-                self.mysql.rollback()
-                self.close()            
     
     # Fechando conexão
     def close(self):
