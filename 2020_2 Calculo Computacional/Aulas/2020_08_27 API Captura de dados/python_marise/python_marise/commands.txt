@@ -17,7 +17,7 @@ CREATE TABLE DATASET_COMP(
 
 #Criar ambiente virtual
 
-python3 -m venv NOMEdoAMBIENTE #(no meu caso windowsenv)
+python -m venv NOMEdoAMBIENTE #(no meu caso windowsenv)
 
 #entrar no Ambiente virtual
 supondo que o ambiente se chame env
