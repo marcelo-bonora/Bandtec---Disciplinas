@@ -1,0 +1,175 @@
+---------- COMANDOS R----------
+
+c() - Combine
+Cria conjuntos
+
+-------------------------------
+
+a<-12
+Criação de variavel
+
+------------------------------
+
+rep(100,10) - repet
+Repetir o numero 100 em 10 vezes
+
+-----------------------------
+
+seq(100,10) -sequence
+Sequencia de 100 até 0 em 10 em 10
+
+------------------------------
+
+xvector = 1 2 3 4 5
+mean(xvector)
+Devolve a média que nesse caso seria o 3
+
+------------------------------
+
+summary()
+Devolve um sumario completo, contendo media, max, min, etc
+
+------------------------------
+
+x<-(1:5)
+x
+[1] 1 2 3 4 5
+
+------------------------------
+
+cat("numeros de 1 a 5", x)
+numero de 1 a 5 1 2 3 4 5
+
+------------------------------
+
+mean(xvector , na.rm =TRUE)
+remove o valor "rm" do conjunto xvector
+
+-----------------------------
+
+m<-matrix(1:30,  nrow = 5 , ncol = 6)
+Nos devolve uma matrox, nrow = numero de linha e ncol = numero de colunas
+
+------------------------------
+
+numberlines <- nrow(m)
+Me devolve o numero de linhas daquela matrix
+
+numbercol <-  ncol(m)
+Me devolve o numero de colunas daquela matrix
+
+matrizt <- lenght(m)
+Me devolveo o comprimeto daquela matrox, ou seja, a quantidade total de elementos dela
+
+-------------------------------
+
+array1 <- array(1:20, dim = c(4,4,4))
+array = criação de matrizes
+1:20 = os elementos dessas matrizes serão de 1 a 20 em ordem crescente
+dim = c(4,4,4) dimension, ou seja, o primeiro numero representa a qtd de tabelas
+ 				   o segundo numero representa a qtd de colunas
+				   o terceiro numero representa a qtd de linhas
+
+--------------------------------
+
+mean(Dados.exportados$cpu)
+Tirando a media, exportando a tabela "Dados.exportados" e pegando a coluna "cpu"
+
+------------------------------
+
+hist(Dados.exportados$cpu, xlab = "cpu_uso", ylab = "frequencia")
+Criação de um histograma
+
+--------------------------------
+
+list(Dados.exportados$cpu)
+Devolve uma lista da tabela "Dados.exportados" da coluna "cpu"
+
+-------------------------------
+
+alt <- c(3,4,3,2,5,2,3,1,3,2,6,5,4,8,6,3,5,3,7,8)
+> luminosidade <- rep(c("muita","pouca"),each=10)
+> dados <- data.frame(alt,luminosidade)
+each faz a 10 copia de cada elemento do conjunto c
+data.frame cria uma tabela, com uma coluna com os valores de "alt" e outra com "luminosidade", numerando cada item listado
+
+--------------------------------
+
+str(dados)
+Ele traz detalhes da tabel "dados"
+
+-------------------------------
+
+class()
+Verificar as variáveis de forma individualizada
+
+-------------------------------
+
+dados$fol<-fol
+Inserir uma nova coluna chamada "fol" na tabela "dados"
+
+-------------------------------
+
+names(dados) 
+names(dados)<-c("altura","luz","folhas")
+Os nomes de cada coluna da tabela "dados"
+Alterando os nomes das colunas da tabela "dados"
+
+-----------------------------
+
+head(dados)
+Retorna as 6 primeiras linhas da tabela "dados"
+
+-----------------------------
+
+tail(dados)
+Retrona os 6 ultimas linhas da tabela "dados"
+
+----------------------------
+
+dados[1,] - pega a primeira linha
+dados[1:3,] - pega da primeira a terceira linha
+dados[c(1,2,5),] - pega as linhas 1, 2 e 5
+dados[,3] - pega a coluna 3
+dados[8,3] - pega o dado da linha 8 e colu 3
+dados[3,1:2] - pega o dados da linha 3 e a coluna 1 a 2
+
+-----------------------------
+
+dados$altura1<-NULL
+Remove todos os valores da coluna "altura1" da tabela "dados"
+
+-----------------------------
+
+subset(dados, luz =='muita')
+dados[dados$altura > 3 & dados$luz =="muita", ] OU bset(dados,altura > 3 & luz == "muita")
+Cria um subconjunto onde pega a tabela "dados" onde na coluna "luz" o valor é iguala "muita"
+Cria um subconjunto onde pega a tabela "dados" onde na coluna "altura" é maior que 3 e na coluna "luz" o valor é iguala "muita"
+
+----------------------------------------------------
+
+ dados[1,1] <- 4
+Estamos alterando o valor da linha 1 na coluna 1 para 4
+
+---------------------------------------------------
+
+foi <- sca()
+cria valores
+
+----------------------------------------------
+
+hist (idade, main="Histograma da idade", ylab = "Frequencia", xlab = "Idade(em anos complestos)")
+hist = histograma; main = titulo; ybal = eixo y; xlab= eixo x;
+
+--------------------------------------------------
+
+set.seed(1234)
+peso <- abs(round(rnorm(n, 55, 4), 2))
+geração de numeros aleatorios
+
+--------------------------------------------
+
+table(filhos)
+tabela
+
+--------------------------------------
