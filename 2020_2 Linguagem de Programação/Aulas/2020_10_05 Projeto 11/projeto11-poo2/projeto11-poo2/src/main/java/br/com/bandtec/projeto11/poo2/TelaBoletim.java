@@ -151,7 +151,7 @@ public class TelaBoletim extends javax.swing.JFrame {
         this.boletim1.analisar(media, frequencia);
         
         this.lbResultado.setText(
-           this.boletim1.isAprovado() ? "Aprovado!" : "Reprovado!");
+           this.boletim1.isAberto()? "Aprovado!" : "Reprovado!");
     }//GEN-LAST:event_btAnalisarActionPerformed
 
     /**
