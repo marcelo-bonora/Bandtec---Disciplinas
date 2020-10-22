@@ -1,0 +1,13 @@
+-- Endereço de minha instância
+/dev/sda1
+
+-- Passo a passo
+1. sudo apt update  && sudo apt upgrade
+2. sudo apt-get install default-jre
+3. sudo update-alternatives --config java
+4. sudo vi /etc/environment
+5. Editar documento -> JAVA_HOME="/usr/bin/java"
+6. esc -> :wq
+7. source /etc/environment
+8. echo $JAVA_HOME
+
