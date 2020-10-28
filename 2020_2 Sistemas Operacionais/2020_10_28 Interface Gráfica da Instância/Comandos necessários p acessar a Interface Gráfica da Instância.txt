@@ -1,0 +1,10 @@
+------ Acessando -------
+1. Abra o diretório em que sua chave se encontra e abra o git bash nele
+
+De o seguinte comando p/ acessar sua insância:
+ssh -i "key21102020.pem" ubuntu@ec2-35-153-136-30.compute-1.amazonaws.com
+
+
+2. Insira  uma senha  no usuário padrão, caso n tenha dado:
+sudo passwd ubuntu
+
