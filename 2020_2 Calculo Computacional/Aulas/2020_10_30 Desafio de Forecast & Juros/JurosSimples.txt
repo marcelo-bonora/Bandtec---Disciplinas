@@ -1,0 +1,25 @@
+IdLeitura,Mes,Valor,Tipo
+1,Janeiro,59,historico
+2,Fevereiro,63,historico
+3,Marco,81,historico
+4,Abril,44,historico
+5,Maio,58,historico
+6,Junho,90,historico
+7,Julho,58,historico
+8,Agostos,85,historico
+9,Setembro,53,historico
+10,Outubro,65,historico
+11,Novembro,68.20,forecast
+12,Dezembro,68.67,forecast
+13,Janeiro,8.85,juros simples	
+14,Fevereiro,18.30,juros simples	
+15,Marco,30.45,juros simples
+16,Abril,37.05,juros simples
+17,Maio,45.75,juros simples
+18,Junho,59.25,juros simples
+19,Julho,67.95,juros simples	
+20,Agostos,80.70,juros simples
+21,Setembro,88.65,juros simples
+22,Outubro,98.40,juros simples	
+23,Novembro,108.63,juros simples
+24,Dezembro,118.93,juros simples	

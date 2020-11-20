@@ -1,0 +1,25 @@
+IdLeitura,Mes,Valor,Tipo
+1,Janeiro,59,historico
+2,Fevereiro,63,historico
+3,Marco,81,historico
+4,Abril,44,historico
+5,Maio,58,historico
+6,Junho,90,historico
+7,Julho,58,historico
+8,Agostos,85,historico
+9,Setembro,53,historico
+10,Outubro,65,historico
+11,Novembro,68.20,forecast
+12,Dezembro,68.67,forecast
+13,Janeiro,8.85,juros compostos
+14,Fevereiro,20.32,juros compostos
+15,Marco,42.19,juros compostos
+16,Abril,32.96,juros compostos
+17,Maio,58.66,juros compostos
+18,Junho,118.18,juros compostos
+19,Julho,96.28,juros compostos
+20,Agostos,175.02,juros compostos
+21,Setembro,133.45,juros compostos
+22,Outubro,197.96,juros compostos
+23,Novembro,249.09,juros compostos
+24,Dezembro,298.73,juros compostos
